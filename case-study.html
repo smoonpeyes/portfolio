@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Case study: Building HEB's Digital Accessibility Program - creating inclusive design systems from scratch.">
     <title>HEB Accessibility Program - Case Study | Layla</title>
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Design System -->
     <link rel="stylesheet" href="design-system/design-system.css">
-    <!-- Styles -->
+    <!-- Site Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Skip to main content link for screen readers -->
     <a href="#main" class="skip-link">Skip to main content</a>
-    
+
     <!-- Header & Navigation -->
     <header class="header">
         <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <a href="index.html" class="logo" aria-label="Home">Layla</a>
-            
+
             <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
-            
+
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-link">Work</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -31,15 +36,15 @@
             </ul>
         </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main id="main" class="main">
         <!-- Case Study Header -->
         <section class="case-study-header">
             <div class="container-narrow">
-                <h1>Building HEB's Digital Accessibility Program</h1>
-                <p style="font-size: var(--font-size-step5); opacity: 0.95;">Creating inclusive design systems from scratch to serve millions of Texas families.</p>
-                
+                <h1>Building HEB's Accessibility Program from the Ground Up</h1>
+                <p class="hero-subtitle">Creating systems and culture that made digital grocery shopping accessible to millions of Texans.</p>
+
                 <div class="case-study-meta">
                     <div class="meta-item">
                         <span class="meta-label">Company</span>
@@ -51,150 +56,131 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Role</span>
-                        <span>Senior Product Designer</span>
+                        <span>Senior Product Designer &rarr; Accessibility Lead</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Focus</span>
-                        <span>Accessibility, Systems Design</span>
+                        <span>Accessibility, Systems Design, Change Management</span>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Case Study Content -->
         <article class="container-narrow">
-            
+
             <!-- Overview Image -->
-            <img src="https://via.placeholder.com/1200x600/3d3d5c/FFF8F0?text=HEB+Accessibility+Program" 
-                 alt="Overview of HEB's digital accessibility program showing various accessible design components" 
+            <img src="https://via.placeholder.com/1200x600/3d3d5c/FFF8F0?text=HEB+Accessibility+Program"
+                 alt="Overview of HEB's digital accessibility program showing various accessible design components"
                  class="case-study-image">
-            
+
             <!-- Challenge Section -->
             <section class="case-study-section">
                 <h2>The Challenge</h2>
-                <p>When I joined HEB Digital in 2018, the company had ambitious goals for their digital transformation, but accessibility wasn't yet part of the conversation. With millions of Texans relying on HEB for groceries—including people with disabilities, aging populations, and those with temporary impairments—we had a responsibility to make our digital products work for everyone.</p>
-                
-                <p>The challenge wasn't just technical. It was cultural, organizational, and systemic:</p>
+                <p>HEB's website and mobile apps were inaccessible to customers using assistive technology. During COVID-19, when customers with disabilities couldn't safely shop in stores, our digital products—which should have been their lifeline—were excluding them.</p>
+
+                <p>The problem was organizational, not just technical:</p>
                 <ul>
-                    <li>No existing accessibility standards or guidelines for designers and engineers</li>
-                    <li>Limited awareness across teams about why accessibility mattered</li>
-                    <li>No tools or processes for testing and validating accessibility</li>
-                    <li>Fast-paced development cycles that often left accessibility as an afterthought</li>
-                    <li>Legacy code and design patterns that needed remediation</li>
+                    <li>No accessibility standards or testing processes</li>
+                    <li>Limited awareness of why it mattered</li>
+                    <li>Screen reader users couldn't complete checkout</li>
+                    <li>Color contrast failed throughout the app</li>
                 </ul>
+
+                <p>We were leaving customers behind.</p>
             </section>
-            
+
             <!-- Approach Section -->
             <section class="case-study-section">
                 <h2>My Approach</h2>
-                <p>I knew that sustainable change required more than just fixing individual products. We needed to build accessibility into the foundation of how HEB Digital worked. My approach focused on three key areas:</p>
-                
-                <h3>1. Building awareness and empathy</h3>
-                <p>Before anyone would invest time or resources into accessibility, they needed to understand why it mattered. I organized workshops where team members experienced the web using only a keyboard, screen reader, or with visual impairments simulated. I shared stories from real HEB customers who struggled with our digital products.</p>
-                
-                <p>The goal wasn't to shame anyone—it was to create genuine empathy and make accessibility personal. When engineers realized their own parents might struggle with the checkout flow, accessibility stopped being a compliance checkbox and became a priority.</p>
-                
-                <h3>2. Creating systems and standards</h3>
-                <p>I developed HEB's first accessibility design guidelines, covering:</p>
-                <ul>
-                    <li>Color contrast requirements and approved color combinations</li>
-                    <li>Typography and text sizing standards</li>
-                    <li>Touch target sizing for mobile interfaces</li>
-                    <li>Keyboard navigation patterns</li>
-                    <li>Screen reader considerations and ARIA best practices</li>
-                    <li>Form design and error handling</li>
-                </ul>
-                
-                <p>These weren't theoretical documents—they were practical, actionable guides that designers could reference during every project. I also created Sketch/Figma components with accessibility built in, making it easier to do the right thing by default.</p>
-                
-                <h3>3. Integrating accessibility into workflows</h3>
-                <p>Good intentions aren't enough without process. I worked with product managers and engineering leads to embed accessibility into our sprint cycles:</p>
-                <ul>
-                    <li>Added accessibility checkpoints to our definition of done</li>
-                    <li>Trained designers to conduct basic accessibility audits</li>
-                    <li>Set up automated testing tools to catch common issues early</li>
-                    <li>Created a review process where I audited high-priority features</li>
-                    <li>Established relationships with accessibility consultants for third-party audits</li>
-                </ul>
+                <p>I saw an opportunity to build something from nothing. Rather than trying to fix everything at once, I focused on <strong>proving value, building grassroots support, and creating infrastructure that could scale.</strong></p>
+
+                <h3>Proved the value through research</h3>
+                <p>Piloted user research with Fable's platform, connecting our team with real assistive technology users. Watching a screen reader user struggle through checkout was more powerful than any compliance argument. Leadership started paying attention.</p>
+
+                <h3>Built grassroots support</h3>
+                <p>Started weekly accessibility office hours where designers and developers could ask questions and learn together. Partnered with a passionate developer to co-lead sessions. About 3–5 people attended regularly, creating a safe space to build capability across the team.</p>
+
+                <h3>Educated the organization</h3>
+                <p>Presented "why accessibility matters" sessions across HEB. I didn't lead with compliance—I led with people. When teams understood their work affected whether customers could feed their families, they started caring deeply about quality. I also ran design workshops on specific topics like focus order and keyboard navigation.</p>
+
+                <h3>Established strategic direction</h3>
+                <p>Worked with the Design System PM and Lead Engineer to research vendors and create a formal accessibility roadmap. Before I left, I presented recommendations to leadership, who were ready to invest in accessibility as a strategic priority.</p>
             </section>
-            
+
             <!-- Solution Image -->
-            <img src="https://via.placeholder.com/1200x600/E63980/FFF8F0?text=Accessibility+Guidelines" 
-                 alt="Sample pages from HEB's accessibility design guidelines" 
+            <img src="https://via.placeholder.com/1200x600/E63980/FFF8F0?text=Accessibility+Guidelines"
+                 alt="Sample pages from HEB's accessibility design guidelines"
                  class="case-study-image">
-            
+
             <!-- Key Features Section -->
             <section class="case-study-section">
-                <h2>Key Projects</h2>
-                <p>While building the program, I also led accessibility improvements across several products:</p>
-                
+                <h2>What I Built</h2>
+
                 <div class="case-study-grid">
                     <div class="case-study-card">
-                        <h4>Shopping & Checkout</h4>
-                        <p>Redesigned the cart and checkout flow with keyboard navigation, clear error messaging, and screen reader support. Reduced checkout abandonment for assistive technology users by 34%.</p>
+                        <h4>Design System &amp; Standards</h4>
+                        <p>Updated color contrast across the app to meet WCAG AA. Created accessible component patterns. Built an accessibility checklist in Figma for design handoff.</p>
                     </div>
-                    
+
                     <div class="case-study-card">
-                        <h4>Coupons & Lists</h4>
-                        <p>Made digital coupons and shopping lists fully accessible, including improved contrast ratios, larger touch targets, and better focus indicators. These features are among the most-used in the app.</p>
+                        <h4>Critical Fixes</h4>
+                        <p>Fixed checkout so screen reader users could complete purchases. Resolved keyboard navigation issues platform-wide. Addressed hundreds of accessibility violations.</p>
                     </div>
-                    
+
                     <div class="case-study-card">
-                        <h4>Account Management</h4>
-                        <p>Overhauled forms across the account section, implementing clear labels, helpful error messages, and better keyboard navigation. Improved form completion rates across all users.</p>
-                    </div>
-                    
-                    <div class="case-study-card">
-                        <h4>Search & Browse</h4>
-                        <p>Enhanced product search and category browsing with better ARIA labels, keyboard shortcuts, and screen reader announcements for dynamic content updates.</p>
+                        <h4>Community &amp; Education</h4>
+                        <p>Weekly office hours became the go-to resource. Workshops on focus order and screen reader UX. Presentations connecting accessibility to HEB values.</p>
                     </div>
                 </div>
             </section>
-            
+
             <!-- Impact Section -->
             <section class="impact">
-                <h3>Impact & Results</h3>
-                <p>By the time I left HEB in 2022, accessibility had gone from an afterthought to a core part of how the team worked:</p>
-                
+                <h3>Impact</h3>
+
                 <div class="impact-stats">
                     <div class="stat">
                         <span class="stat-number">WCAG 2.1 AA</span>
                         <span class="stat-label">Compliance achieved</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">40+</span>
-                        <span class="stat-label">Team members trained</span>
+                        <span class="stat-number">100s</span>
+                        <span class="stat-label">Violations resolved</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">18%</span>
-                        <span class="stat-label">Increase in completion rates</span>
+                        <span class="stat-number">3–5</span>
+                        <span class="stat-label">Weekly office hours attendees</span>
                     </div>
                 </div>
-                
-                <p style="margin-top: var(--space-4);">More importantly, we received heartfelt feedback from customers who previously couldn't shop online independently. One customer wrote to thank us because she could finally order groceries for her family without asking for help—a small change for us, but a huge impact on her dignity and independence.</p>
+
+                <p style="margin-top: var(--space-lg);"><strong>Screen reader users could finally complete checkout independently.</strong> Color contrast met WCAG 2.1 AA standards across the design system. Hundreds of accessibility violations resolved across web and mobile.</p>
+
+                <p><strong>Cultural shift:</strong> Designers proactively presented accessible options; change spread organically. Cross-functional collaboration strengthened through office hours.</p>
+
+                <p><strong>Lasting foundation:</strong> Created infrastructure and processes that could scale beyond any one person. Left leadership ready to invest in accessibility as a strategic priority, not just a compliance checkbox.</p>
             </section>
-            
+
             <!-- Reflection Section -->
             <section class="case-study-section">
                 <h2>What I Learned</h2>
-                <p>This project taught me that building lasting change requires more than design skills—it requires advocacy, patience, and systems thinking. Some key lessons:</p>
-                
-                <ul>
-                    <li><strong>Empathy is contagious:</strong> When you help people understand the human impact of accessibility, they become champions too.</li>
-                    <li><strong>Make the right thing easy:</strong> Creating accessible design components and clear guidelines reduced friction and made accessibility the path of least resistance.</li>
-                    <li><strong>Start with quick wins:</strong> Early successes (like fixing color contrast issues) built momentum and credibility for bigger initiatives.</li>
-                    <li><strong>Measure what matters:</strong> Tracking completion rates and user feedback was more persuasive than theoretical arguments about compliance.</li>
-                    <li><strong>It's never "done":</strong> Accessibility is an ongoing practice, not a one-time project. The program I started continues to evolve today.</li>
-                </ul>
-                
-                <p>This is the work I'm most proud of from my time at HEB. Not because it was technically complex, but because it genuinely helped people and created a foundation that will benefit millions of Texans for years to come.</p>
+
+                <p><strong>You don't need permission to lead.</strong> I saw a gap and started building. Sometimes leadership is about making what needs to exist.</p>
+
+                <p><strong>Change spreads through people, not policy.</strong> Office hours and education did more than mandates ever could. When people understood the human impact, accessibility became part of our culture.</p>
+
+                <p><strong>The biggest challenge was not knowing what I didn't know.</strong> But being honest about gaps and building community around shared learning mattered more than pretending to be an expert. I learned as much from teaching as my team learned from me.</p>
+
+                <p><strong>This is the work I'm most proud of</strong>—not because it was technically complex, but because it genuinely helped people and created something lasting. I hope HEB designers are still designing accessible experiences and talking to customers who use assistive technology to shop.</p>
+
+                <p>Building something from nothing and watching a team embrace inclusive design because they genuinely cared—that's the impact I want to keep making.</p>
             </section>
-            
+
             <!-- Final Image -->
-            <img src="https://via.placeholder.com/1200x600/00D9A3/2d2d2d?text=Accessible+HEB+Products" 
-                 alt="Examples of accessible HEB digital products in use" 
+            <img src="https://via.placeholder.com/1200x600/00D9A3/2d2d2d?text=Accessible+HEB+Products"
+                 alt="Examples of accessible HEB digital products in use"
                  class="case-study-image">
-            
+
             <!-- Navigation to other case studies -->
             <nav class="case-study-nav" aria-label="Other case studies">
                 <a href="case-study.html">
@@ -203,21 +189,20 @@
                 </a>
                 <a href="case-study.html">
                     <span class="nav-label">Next</span>
-                    <span class="nav-title">HEB Coupons & Shopping Lists</span>
+                    <span class="nav-title">HEB Coupons &amp; Shopping Lists</span>
                 </a>
             </nav>
         </article>
     </main>
-    
+
     <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="footer-content">
             <div>
                 <h3>Layla</h3>
-                <p>Principal UX Designer<br>
-                Austin, TX</p>
+                <p>Principal UX Designer<br>Austin, TX</p>
             </div>
-            
+
             <div>
                 <h3>Connect</h3>
                 <p>
@@ -232,38 +217,36 @@
                     </a>
                 </div>
             </div>
-            
+
             <div>
                 <h3>Currently</h3>
                 <p>Principal Designer at Amdocs Studios, working on Southwest Airlines. Exploring new opportunities. Revising TV pilots. Drumming in an all-women surf rock band.</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2025 Layla. All rights reserved. Designed and built with accessibility in mind.</p>
         </div>
     </footer>
-    
+
     <!-- JavaScript for mobile menu -->
     <script>
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navList = document.querySelector('.nav-list');
-        
+
         mobileMenuToggle.addEventListener('click', () => {
             const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
             mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
             navList.classList.toggle('active');
         });
-        
-        // Close menu when clicking outside
+
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.nav-container')) {
                 navList.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         });
-        
-        // Close menu on escape key
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navList.classList.contains('active')) {
                 navList.classList.remove('active');
