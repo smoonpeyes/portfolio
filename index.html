@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UX Designer with 20+ years of experience designing for accessibility, building systems that last, and creating impactful digital products.">
     <title>Layla - UX Designer | Design for the Long Run</title>
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Design System -->
     <link rel="stylesheet" href="design-system/design-system.css">
-    <!-- Styles -->
+    <!-- Site Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Skip to main content link for screen readers -->
     <a href="#main" class="skip-link">Skip to main content</a>
-    
+
     <!-- Header & Navigation -->
     <header class="header">
         <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <a href="index.html" class="logo" aria-label="Home">Layla</a>
-            
+
             <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
-            
+
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-link active" aria-current="page">Work</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="case-study.html" class="nav-link">Case Studies</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main id="main" class="main">
         <!-- Hero Section -->
@@ -43,16 +49,16 @@
                 <a href="#work" class="btn">View my work</a>
             </div>
         </section>
-        
+
         <!-- Featured Work -->
         <section id="work" class="container">
             <h2>Featured Work</h2>
             <p class="intro-text">Selected projects that demonstrate my approach to building lasting digital experiences.</p>
-            
+
             <div class="work-grid">
                 <!-- Case Study 1 -->
                 <article class="work-card">
-                    <img src="https://via.placeholder.com/600x400/3d3d5c/FFF8F0?text=HEB+Accessibility" alt="HEB Digital Accessibility Program" class="work-card-image">
+                    <div class="work-card-image work-card-image--slate" role="img" aria-label="HEB Digital Accessibility Program"></div>
                     <div class="work-card-content">
                         <span class="work-card-meta">HEB · 2019-2022</span>
                         <h3>Building HEB's Accessibility Program</h3>
@@ -60,10 +66,10 @@
                         <a href="case-study.html">Read case study</a>
                     </div>
                 </article>
-                
+
                 <!-- Case Study 2 -->
                 <article class="work-card">
-                    <img src="https://via.placeholder.com/600x400/E63980/FFF8F0?text=Southwest+Airlines" alt="Southwest Airlines Internal Apps" class="work-card-image">
+                    <div class="work-card-image work-card-image--pink" role="img" aria-label="Southwest Airlines Internal Apps"></div>
                     <div class="work-card-content">
                         <span class="work-card-meta">Southwest Airlines · 2022-Present</span>
                         <h3>Southwest Flight Crew Apps</h3>
@@ -71,10 +77,10 @@
                         <a href="case-study.html">Read case study</a>
                     </div>
                 </article>
-                
+
                 <!-- Case Study 3 -->
                 <article class="work-card">
-                    <img src="https://via.placeholder.com/600x400/00D9A3/2d2d2d?text=HEB+Coupons" alt="HEB Coupons & Shopping Lists" class="work-card-image">
+                    <div class="work-card-image work-card-image--seafoam" role="img" aria-label="HEB Coupons &amp; Shopping Lists"></div>
                     <div class="work-card-content">
                         <span class="work-card-meta">HEB · 2018-2020</span>
                         <h3>Coupons & Shopping Lists</h3>
@@ -84,39 +90,39 @@
                 </article>
             </div>
         </section>
-        
+
         <!-- Differentiators Section -->
         <section class="differentiators">
             <div class="container">
                 <h2>My Differentiators</h2>
                 <p class="intro-text">What makes my approach unique.</p>
-                
+
                 <div class="differentiators-grid">
                     <div class="differentiator">
                         <h3>I'm a builder of foundations...</h3>
                         <p>I don't just design products—I build the infrastructure that makes good design possible at scale. At HEB, I started the digital accessibility program from scratch. I know how to identify gaps, make the case for investment, and create systems that outlast any single project.</p>
                     </div>
-                    
+
                     <div class="differentiator">
                         <h3>I'm a translator...</h3>
                         <p>I spent 20+ years moving between highly technical stakeholders (pilots, flight attendants, engineers) and everyday users (grocery shoppers, families). I can take complex regulatory requirements or business constraints and turn them into intuitive experiences.</p>
                     </div>
-                    
+
                     <div class="differentiator">
                         <h3>I'm a drummer...</h3>
                         <p>When you're the drummer in a band, you're the backbone. You set the tempo, you keep everyone together, and if you mess up, the whole song falls apart. I bring that same energy to design: I know when to lead, when to support, and how to keep a team in sync.</p>
                     </div>
-                    
+
                     <div class="differentiator">
                         <h3>I'm a runner...</h3>
                         <p>Trail running teaches you that the path is never straightforward. There are switchbacks, obstacles, and moments where you question why you're doing this. But you keep moving forward, adapt to the terrain, and celebrate when you reach the summit. That's my approach to complex design challenges.</p>
                     </div>
-                    
+
                     <div class="differentiator">
                         <h3>I'm a storyteller...</h3>
                         <p>Before I was a designer, I wanted to be a screenwriter (still do, honestly). That training taught me that everything is about the narrative: Why does this button matter? What's the user's emotional journey? I bring that storytelling lens to everything I do.</p>
                     </div>
-                    
+
                     <div class="differentiator">
                         <h3>I'm an advocate...</h3>
                         <p>I've been the one in the room saying "but what about accessibility?" for my entire career. Good design doesn't just work for the happy path—it works for everyone, including the people who get forgotten. I genuinely care about inclusive design.</p>
@@ -124,24 +130,23 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- CTA Section -->
-        <section class="container" style="text-align: center; padding: var(--space-8) var(--space-2);">
+        <section class="container cta-section">
             <h2>Let's work together</h2>
-            <p style="font-size: var(--font-size-step5); max-width: 600px; margin: 0 auto var(--space-4);">I'm currently exploring new opportunities. If you're looking for a designer who builds for the long run, let's talk.</p>
+            <p>I'm currently exploring new opportunities. If you're looking for a designer who builds for the long run, let's talk.</p>
             <a href="#contact" class="btn">Get in touch</a>
         </section>
     </main>
-    
+
     <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="footer-content">
             <div>
                 <h3>Layla</h3>
-                <p>Principal UX Designer<br>
-                Austin, TX</p>
+                <p>Principal UX Designer<br>Austin, TX</p>
             </div>
-            
+
             <div>
                 <h3>Connect</h3>
                 <p>
@@ -156,38 +161,36 @@
                     </a>
                 </div>
             </div>
-            
+
             <div>
                 <h3>Currently</h3>
                 <p>Principal Designer at Amdocs Studios, working on Southwest Airlines. Exploring new opportunities. Revising TV pilots. Drumming in an all-women surf rock band.</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2025 Layla. All rights reserved. Designed and built with accessibility in mind.</p>
         </div>
     </footer>
-    
+
     <!-- JavaScript for mobile menu -->
     <script>
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navList = document.querySelector('.nav-list');
-        
+
         mobileMenuToggle.addEventListener('click', () => {
             const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
             mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
             navList.classList.toggle('active');
         });
-        
-        // Close menu when clicking outside
+
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.nav-container')) {
                 navList.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         });
-        
-        // Close menu on escape key
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navList.classList.contains('active')) {
                 navList.classList.remove('active');

@@ -221,6 +221,46 @@
 }
 
 /* ------------------------------------------------------------
+   SHORTHAND ALIASES
+   Convenience shorthands for the revised portfolio styles.
+   These map simple names to the full token scale above.
+   ------------------------------------------------------------ */
+:root {
+  /* Color shorthands */
+  --color-slate:       var(--color-slate-500);
+  --color-slate-light: #4a4a6a;
+  --color-pink:        var(--color-pink-500);
+  --color-pink-hover:  var(--color-pink-600);
+  --color-seafoam:     var(--color-seafoam-500);
+  --color-teal-dark:   var(--color-seafoam-700);
+  --color-purple:      var(--color-purple-500);
+  --color-cream:       var(--color-neutral-50);
+  --color-charcoal:    var(--color-neutral-900);
+  --color-text:        var(--color-neutral-900);
+  --color-text-light:  var(--color-neutral-600);
+  --color-border:      #e5e5e5;
+  --color-white:       var(--color-neutral-0);
+
+  /* Font shorthand */
+  --font-primary: var(--font-family-primary);
+
+  /* Spacing shorthands (xs→xl map to numbered tokens) */
+  --space-xs:  var(--space-1);
+  --space-sm:  var(--space-2);
+  --space-md:  var(--space-3);
+  --space-lg:  var(--space-4);
+  --space-xl:  var(--space-6);
+  --space-2xl: var(--space-8);
+  --space-3xl: var(--space-12);
+
+  /* Layout & misc shorthands */
+  --max-width:        1200px;
+  --max-width-narrow: 800px;
+  --border-radius:    var(--radius-base);
+  --transition:       all 0.3s ease;
+}
+
+/* ------------------------------------------------------------
    DARK MODE
    ------------------------------------------------------------ */
 [data-theme="dark"] {

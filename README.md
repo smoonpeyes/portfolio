@@ -1,207 +1,245 @@
-# Surf Rock Portfolio Template
+# Layla — UX Designer Portfolio
 
-A responsive, accessible portfolio template with Muted Surf colors and Plus Jakarta Sans typography—bold enough to show personality, professional enough for serious work.
+A responsive, accessible portfolio built on a structured design system. Muted Surf color palette, Plus Jakarta Sans typography, and WCAG 2.1 AA compliant throughout.
 
-## 🎨 Design System
+---
 
-### Colors - Muted Surf Palette
-- **Deep Slate**: `#3d3d5c` - Primary brand color (backgrounds, headers)
-- **Punch Pink**: `#E63980` - Primary CTA/button color
-- **Seafoam**: `#00D9A3` - Accent color (used on dark backgrounds)
-- **Deep Purple**: `#5B2A86` - Link color (accessible on light backgrounds)
-- **Cream**: `#FFF8F0` - Main background color
-- **Charcoal**: `#2d2d2d` - Text color
+## Design System
 
-### Typography
-- **All text**: Plus Jakarta Sans (400, 500, 600, 700)
-- Warm, rounded, approachable without being casual
-- Optimized for screen reading
+The design system lives in `design-system/` and is the single source of truth for all visual decisions. Every page imports it before `styles.css`.
 
-## 📁 Files Included
-
-- `index.html` - Home page with hero, featured work, and differentiators
-- `about.html` - About page with biography and differentiators
-- `case-study.html` - Case study template with structured sections
-- `styles.css` - Complete stylesheet with responsive design and accessibility
-- `README.md` - This file
-
-## ✨ Features
-
-### Accessibility (WCAG 2.1 AA Compliant)
-- Semantic HTML5 structure
-- ARIA labels and landmarks
-- Skip-to-content link
-- Keyboard navigation support
-- All color combinations meet contrast requirements
-- Deep purple (#5B2A86) used for links on cream backgrounds (AAA compliant)
-- High contrast mode support
-- Reduced motion support
-- Focus indicators on all interactive elements
-- Proper heading hierarchy
-
-### Responsive Design
-- Mobile-first approach
-- Breakpoints at 768px and 480px
-- Responsive navigation with mobile menu
-- Flexible grid layouts
-- Fluid typography using `clamp()`
-- Touch-friendly targets (44px minimum)
-
-### Performance
-- Optimized CSS with CSS custom properties
-- Minimal JavaScript (only for mobile menu)
-- Single web font family (Plus Jakarta Sans)
-- Clean, semantic markup
-
-## 🚀 Getting Started
-
-### 1. Replace placeholder content
-
-**Personal Information:**
-- Update all instances of "Layla" with your name
-- Replace `your.email@example.com` with your email
-- Update LinkedIn URLs
-- Customize the "Currently" section in the footer
-
-**Project Content:**
-- Replace placeholder images with your actual project screenshots
-- Update work card descriptions
-- Create your own case studies using the template
-- Customize differentiators with your own stories
-
-### 2. Add your images
-
-**Recommended image sizes:**
-- Work card thumbnails: 600x400px
-- Case study images: 1200x600px
-- Always include descriptive alt text
-
-**Optimize for web:**
-- Compress images
-- Consider using WebP format
-- Keep file sizes under 200KB per image
-
-### 3. Update colors (optional)
-
-If you want to tweak the colors, update these CSS variables in `styles.css`:
-
-```css
-:root {
-    --color-slate: #3d3d5c;
-    --color-pink: #E63980;
-    --color-seafoam: #00D9A3;
-    --color-purple: #5B2A86;
-    --color-cream: #FFF8F0;
-    --color-charcoal: #2d2d2d;
-}
+```html
+<link rel="stylesheet" href="design-system/design-system.css">
+<link rel="stylesheet" href="styles.css">
 ```
 
-## 📝 Case Study Structure
+### Files
 
-The case study template follows this narrative:
-1. **Challenge** - What was the problem?
-2. **Approach** - How did you tackle it?
-3. **Key Projects** - What did you build?
-4. **Impact** - What were the results?
-5. **Reflection** - What did you learn?
+| File | Purpose |
+|------|---------|
+| `design-system/tokens.json` | Machine-readable token definitions (W3C Design Token format) |
+| `design-system/design-system.css` | CSS custom properties generated from tokens |
+| `design-system/index.html` | Token reference documentation |
 
-This structure tells a complete story while showcasing your process.
+---
 
-## 🎯 Accessibility Checklist
+## Color Tokens
 
-Before publishing:
-- [ ] All images have descriptive alt text
-- [ ] Color contrast verified with a contrast checker
-- [ ] All interactive elements keyboard accessible
-- [ ] Headings follow logical hierarchy
-- [ ] Links have descriptive text
-- [ ] Test with screen reader
-- [ ] Test keyboard navigation
-- [ ] Test on mobile devices
-- [ ] Page titles are unique
-- [ ] Forms (if added) have proper labels
+### Muted Surf Palette
 
-## 🔧 Customization Tips
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--color-slate-500` | `#3d3d5c` | Hero backgrounds, navigation |
+| `--color-pink-500` | `#E63980` | Primary CTA, buttons, accents |
+| `--color-seafoam-500` | `#00D9A3` | Footer hover, success states |
+| `--color-purple-500` | `#5B2A86` | Inline links (8.2:1 on cream — AAA) |
+| `--color-neutral-50` | `#FFF8F0` | Page background (cream) |
+| `--color-neutral-900` | `#2d2d2d` | Primary text (charcoal) |
 
-### Adding New Pages
-1. Duplicate an existing HTML file
-2. Update the page title and meta description
-3. Update the active navigation link
-4. Customize the content
-5. Link from navigation menu
-
-### Changing Typography
-To use a different font, update the Google Fonts link in each HTML file and the CSS variable:
+Each brand color has a 10-step scale (50–900). Use the numbered tokens for precise control:
 
 ```css
---font-primary: 'Your Font Name', -apple-system, sans-serif;
+/* Examples */
+background: var(--color-slate-500);
+color: var(--color-pink-600);   /* hover state — darker */
+border: 1px solid var(--color-neutral-300);
 ```
 
-### Mobile Menu
-The mobile menu automatically appears on screens < 768px. It:
-- Slides in from the right
-- Closes on outside click
-- Closes on Escape key
-- Updates ARIA attributes for accessibility
+### Shorthand Aliases
 
-## 📱 Browser Support
+For convenience, the design system also exposes shorthand aliases used throughout `styles.css`:
 
-Tested in:
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile Safari (iOS 14+)
-- Chrome Mobile (latest)
+```css
+--color-slate        /* = --color-slate-500 */
+--color-slate-light  /* = #4a4a6a (gradient second stop) */
+--color-pink         /* = --color-pink-500 */
+--color-pink-hover   /* = --color-pink-600 */
+--color-seafoam      /* = --color-seafoam-500 */
+--color-purple       /* = --color-purple-500 */
+--color-cream        /* = --color-neutral-50 */
+--color-charcoal     /* = --color-neutral-900 */
+--color-text         /* = --color-neutral-900 */
+--color-text-light   /* = --color-neutral-600 */
+--color-white        /* = --color-neutral-0 (#ffffff) */
+--color-border       /* = #e5e5e5 */
+```
 
-Uses modern CSS:
-- CSS Grid
-- Flexbox
-- CSS Custom Properties
-- `clamp()` for fluid typography
+### Semantic Aliases
 
-## 💡 Design Decisions
+```css
+--color-background      /* page background */
+--color-surface         /* card/panel background */
+--color-text-primary    /* main body text */
+--color-text-secondary  /* muted text, metadata */
+--color-text-link       /* link color (purple) */
+--color-text-link-hover /* link hover color (pink) */
+--color-brand-accent    /* pink — primary interactive */
+--color-brand-highlight /* seafoam — success/footer accent */
+--color-focus-ring      /* pink — keyboard focus outline */
+```
 
-### Why Muted Surf?
-- **Professional but memorable**: Bold enough to stand out, muted enough for corporate settings
-- **Great accessibility**: All combinations meet or exceed WCAG AA
-- **Authentic**: Reflects your surf rock background without being literal
-- **Timeless**: Won't feel dated in a year
+### Dark Mode
 
-### Why Plus Jakarta Sans?
-- **Warm and approachable**: Slightly rounded without being casual
-- **Excellent readability**: Optimized for screens
-- **Good weight range**: 400-700 weights for clear hierarchy
-- **Single font family**: Creates visual cohesion, faster loading
+Apply `data-theme="dark"` to `<html>` to activate dark mode. Semantic alias tokens remap automatically.
 
-### Why Purple for Links?
-- **Accessibility**: #5B2A86 on cream background = 8.2:1 contrast (AAA)
-- **Differentiation**: Distinct from pink buttons
-- **Part of palette**: Ties into surf rock colors
+```html
+<html lang="en" data-theme="dark">
+```
 
-## 🐛 Troubleshooting
+### Semantic States
 
-**Colors look washed out:**
-- Check your display settings
-- Verify images aren't affecting perception
-- Test on multiple devices
+```css
+--color-success-base  /* #00917a — AA on white */
+--color-warning-base  /* #b45309 — AA on white */
+--color-error-base    /* #dc2626 — AA on white */
+--color-info-base     /* #5B2A86 — AAA on white */
+```
 
-**Mobile menu not working:**
-- Verify JavaScript is enabled
-- Check browser console for errors
-- Clear browser cache
+---
 
-**Fonts not loading:**
-- Verify internet connection (Google Fonts loads from CDN)
-- Check the Google Fonts link in HTML head
-- Try refreshing the page
+## Typography
 
-**Layout breaking on mobile:**
-- Verify viewport meta tag in HTML head
-- Test in actual mobile browsers
-- Check for fixed widths on elements
+**Single font family:** Plus Jakarta Sans — warm, geometric humanist sans-serif loaded from Google Fonts.
 
-## 📄 License
+```css
+--font-primary  /* Plus Jakarta Sans stack */
+--font-family-mono  /* JetBrains Mono — code blocks, labels */
+```
 
-This template is provided for your personal portfolio use. Customize it however you'd like!
+### Type Scale (Major Third, 1.25× ratio)
 
-Questions? Found a bug? Want to share your customized version? Let me know!
+| Token | Size | Usage |
+|-------|------|-------|
+| `--font-size-step2` | 0.75rem | Labels, meta, captions |
+| `--font-size-step3` | 0.875rem | Small body, card meta |
+| `--font-size-step4` | 1rem | Base body copy |
+| `--font-size-step5` | 1.25rem | Lead paragraphs, h4 |
+| `--font-size-step6` | 1.563rem | H3 / subheadings |
+| `--font-size-step7` | 1.953rem | H2 / section titles |
+| `--font-size-step8` | 2.441rem | H1 / page titles |
+| `--font-size-step9` | 3.052rem | Display / hero headings |
+| `--font-size-hero` | fluid clamp | Super-display (fluid) |
+
+### Font Weights
+
+```css
+--font-weight-regular:  400  /* body copy */
+--font-weight-medium:   500  /* subtitles, labels */
+--font-weight-semibold: 600  /* nav, buttons, UI labels */
+--font-weight-bold:     700  /* headings, stats */
+```
+
+### Line Heights
+
+```css
+--line-height-tight:   1.2  /* headings */
+--line-height-base:    1.7  /* body default */
+--line-height-relaxed: 1.8  /* long-form, about page */
+```
+
+---
+
+## Spacing
+
+8px grid. Named tokens map to multiples of 0.5rem:
+
+| Numeric token | Shorthand | Value | Usage |
+|--------------|-----------|-------|-------|
+| `--space-1` | `--space-xs` | 0.5rem | Icon gaps, badge padding |
+| `--space-2` | `--space-sm` | 1rem | Button gaps, paragraph margins |
+| `--space-3` | `--space-md` | 1.5rem | Card padding, form fields |
+| `--space-4` | `--space-lg` | 2rem | Card grid gap |
+| `--space-6` | `--space-xl` | 3rem | Large section gaps |
+| `--space-8` | `--space-2xl` | 4rem | Section vertical padding |
+| `--space-12` | `--space-3xl` | 6rem | Page-level section gaps |
+
+---
+
+## Shadows
+
+```css
+--shadow-md   /* 0 4px 20px rgba(0,0,0,0.08) — card default */
+--shadow-lg   /* 0 8px 30px rgba(0,0,0,0.12) — card hover, modal */
+--shadow-pink /* 0 4px 12px rgba(230,57,128,0.3) — button hover */
+--shadow-focus /* 0 0 0 3px rgba(230,57,128,0.35) — focus ring */
+```
+
+---
+
+## Motion
+
+All durations respect `prefers-reduced-motion`.
+
+```css
+--motion-link-hover  /* 200ms ease-out — nav underlines, color changes */
+--motion-card-hover  /* 300ms spring  — card lift with bounce */
+--motion-modal-open  /* 500ms expressive — modal/drawer entrance */
+```
+
+---
+
+## Layout
+
+```css
+--max-width:        1200px  /* wide container */
+--max-width-narrow: 800px   /* article / case study */
+--border-radius:    8px     /* = --radius-base */
+```
+
+Responsive breakpoints (mobile-first):
+
+```css
+/* Tablet */
+@media (max-width: 768px) { ... }
+
+/* Small mobile */
+@media (max-width: 480px) { ... }
+```
+
+---
+
+## Site Pages
+
+| File | Description |
+|------|-------------|
+| `index.html` | Home — hero, featured work, differentiators, CTA |
+| `about.html` | Biography, career highlights, differentiators |
+| `case-study.html` | HEB Accessibility Program case study |
+| `styles.css` | All component styles, references design system tokens |
+
+### Case Study Narrative Structure
+
+Each case study follows this arc:
+
+1. **Challenge** — What problem existed and why it mattered
+2. **Approach** — Strategy, not just tactics
+3. **What I Built** — Concrete deliverables
+4. **Impact** — Measurable outcomes + cultural change
+5. **What I Learned** — Honest reflection
+
+---
+
+## Accessibility
+
+This site is built to WCAG 2.1 AA:
+
+- Skip-to-content link on every page
+- Semantic HTML5 with proper heading hierarchy
+- ARIA labels and landmarks throughout
+- All color pairs tested for contrast (purple links = AAA on cream)
+- Keyboard navigation with visible focus indicators
+- Mobile menu controlled via ARIA `aria-expanded`
+- `prefers-reduced-motion` and `prefers-contrast: high` media queries
+- 44px minimum touch targets
+
+---
+
+## Updating Content
+
+**Colors** — Edit `--color-*` tokens in `design-system/design-system.css`. Changes propagate everywhere automatically.
+
+**Typography** — Update the Google Fonts link in each HTML `<head>` and the `--font-primary` token.
+
+**Content** — Edit HTML files directly. Placeholder images (`via.placeholder.com`) should be replaced with real project screenshots (600×400px for work cards, 1200×600px for case study images).
+
+**Adding pages** — Duplicate an HTML file, update the `<title>`, meta description, and active nav link. No new CSS needed for standard layouts.
