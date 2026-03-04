@@ -204,18 +204,4 @@ Uses modern CSS:
 
 This template is provided for your personal portfolio use. Customize it however you'd like!
 
-## 💬 Final Notes
-
-This design balances **personality with professionalism**. The surf rock colors show you're confident and creative, while the clean structure and excellent accessibility demonstrate serious UX chops.
-
-**For the HEB role**: This strikes the right tone—professional enough for enterprise, interesting enough to be memorable.
-
-**For creative roles**: Feel free to push the colors brighter or add more visual personality.
-
-**For your screenwriting side**: The storytelling structure in case studies mirrors narrative arcs—use it!
-
-Good luck! Remember: you're designing for the long run, so focus on creating something timeless and authentic to you.
-
----
-
 Questions? Found a bug? Want to share your customized version? Let me know!
