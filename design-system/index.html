@@ -257,6 +257,56 @@
       cursor: pointer;
     }
 
+    /* Motion section */
+    .motion-track {
+      flex: 1;
+      height: 4px;
+      background: var(--color-border-subtle);
+      border-radius: var(--radius-full);
+      position: relative;
+      overflow: visible;
+    }
+    .motion-runner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: var(--radius-full);
+      background: var(--color-pink-500);
+      transition: left 50ms linear;
+    }
+    .motion-play {
+      background: none;
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-sm);
+      padding: 2px 10px;
+      font-size: var(--font-size-step2);
+      font-family: var(--font-family-primary);
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+    }
+    .motion-play:hover { border-color: var(--color-pink-500); color: var(--color-pink-500); }
+
+    #demoCard {
+      padding: var(--space-2) var(--space-4);
+      font-size: var(--font-size-step4);
+      border-radius: var(--radius-base);
+      background: var(--color-pink-500);
+      transition: transform var(--motion-card-hover), box-shadow var(--motion-card-hover);
+    }
+    #demoCard:hover { transform: translateY(-4px) scale(1.02); box-shadow: var(--shadow-pink); }
+    #demoLink {
+      padding: var(--space-2) var(--space-4);
+      font-size: var(--font-size-step4);
+      border-radius: var(--radius-base);
+      background: var(--color-slate-500);
+      transition: background var(--motion-link-hover);
+    }
+    #demoLink:hover { background: var(--color-seafoam-600); }
+
     /* Alias tokens */
     .alias-grid {
       display: grid;
@@ -613,27 +663,23 @@
       <h2>Motion</h2>
 
       <div class="ds-subsection">
-        <h3>Durations</h3>
-        <div class="motion-grid">
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">instant</span><span class="motion-value">50ms — Tooltip, icon swap</span></div>
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">fast</span><span class="motion-value">100ms — Button press</span></div>
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">normal</span><span class="motion-value">200ms — Nav links, badges</span></div>
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">moderate</span><span class="motion-value">300ms — Card hover, input focus</span></div>
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">slow</span><span class="motion-value">500ms — Modal open/close</span></div>
-          <div class="motion-row"><div class="motion-dot"></div><span class="motion-label">slower</span><span class="motion-value">700ms — Hero entrance</span></div>
+        <h3>Durations — click Play to compare</h3>
+        <div class="motion-grid" id="motionGrid">
+          <div class="motion-row" data-ms="50"  data-ease="linear"><span class="motion-label">instant</span><span class="motion-value" style="min-width:220px">50ms — Tooltip, icon swap</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
+          <div class="motion-row" data-ms="100" data-ease="cubic-bezier(0,0,0.2,1)"><span class="motion-label">fast</span><span class="motion-value" style="min-width:220px">100ms — Button press</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
+          <div class="motion-row" data-ms="200" data-ease="cubic-bezier(0,0,0.2,1)"><span class="motion-label">normal</span><span class="motion-value" style="min-width:220px">200ms — Nav links, badges</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
+          <div class="motion-row" data-ms="300" data-ease="cubic-bezier(0.34,1.56,0.64,1)"><span class="motion-label">moderate</span><span class="motion-value" style="min-width:220px">300ms — Card hover (spring)</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
+          <div class="motion-row" data-ms="500" data-ease="cubic-bezier(0.16,1,0.3,1)"><span class="motion-label">slow</span><span class="motion-value" style="min-width:220px">500ms — Modal open/close</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
+          <div class="motion-row" data-ms="700" data-ease="cubic-bezier(0,0,0.2,1)"><span class="motion-label">slower</span><span class="motion-value" style="min-width:220px">700ms — Hero entrance</span><div class="motion-track"><div class="motion-runner"></div></div><button class="motion-play">Play</button></div>
         </div>
       </div>
 
       <div class="ds-subsection">
-        <h3>Live Demo</h3>
+        <h3>Hover Demo</h3>
         <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;align-items:center">
-          <button class="motion-demo-btn" id="demoCard" style="padding:var(--space-2) var(--space-4);font-size:var(--font-size-step4);border-radius:var(--radius-base);background:var(--color-pink-500);transition:transform var(--motion-card-hover),box-shadow var(--motion-card-hover)">Hover me (spring)</button>
-          <button class="motion-demo-btn" id="demoLink" style="padding:var(--space-2) var(--space-4);font-size:var(--font-size-step4);border-radius:var(--radius-base);background:var(--color-slate-500);transition:background var(--motion-link-hover)">Hover me (ease-out)</button>
+          <button class="motion-demo-btn" id="demoCard">Hover me (spring)</button>
+          <button class="motion-demo-btn" id="demoLink">Hover me (ease-out)</button>
         </div>
-        <style>
-          #demoCard:hover { transform: translateY(-4px) scale(1.02); box-shadow: var(--shadow-pink); }
-          #demoLink:hover { background: var(--color-seafoam-600); }
-        </style>
       </div>
     </section>
 
@@ -666,9 +712,37 @@
   </footer>
 
   <script>
+    // Dark mode toggle
     const toggle = document.getElementById('themeToggle');
     toggle.addEventListener('change', () => {
       document.documentElement.setAttribute('data-theme', toggle.checked ? 'dark' : '');
+    });
+
+    // Motion play buttons
+    document.getElementById('motionGrid').addEventListener('click', e => {
+      const btn = e.target.closest('.motion-play');
+      if (!btn) return;
+      const row = btn.closest('.motion-row');
+      const ms = parseInt(row.dataset.ms, 10);
+      const ease = row.dataset.ease;
+      const track = row.querySelector('.motion-track');
+      const runner = row.querySelector('.motion-runner');
+      const trackW = track.offsetWidth - 16; // subtract dot width
+
+      // Reset to start instantly
+      runner.style.transition = 'none';
+      runner.style.left = '0px';
+
+      // Force reflow then animate
+      runner.getBoundingClientRect();
+      runner.style.transition = `left ${ms}ms ${ease}`;
+      runner.style.left = trackW + 'px';
+
+      // Reset back after animation completes + small pause
+      setTimeout(() => {
+        runner.style.transition = 'none';
+        runner.style.left = '0px';
+      }, ms + 400);
     });
   </script>
 
