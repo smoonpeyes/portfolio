@@ -47,7 +47,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary);
+    font-family: var(--font-heading);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
     color: var(--color-charcoal);
@@ -388,6 +388,139 @@ a:focus {
 .differentiator p {
     color: var(--color-text-light);
     margin-bottom: 0;
+}
+
+/* ===================================
+   Lucide Icon Base
+   =================================== */
+
+/* Ensure Lucide SVGs are inline-block and inherit current color */
+[data-lucide] {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+/* Differentiator icons */
+.differentiator-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-md);
+    display: block;
+    stroke-width: 1.5px;
+}
+
+.differentiator-icon--pink    { color: var(--color-pink); }
+.differentiator-icon--seafoam { color: var(--color-seafoam); }
+.differentiator-icon--purple  { color: var(--color-purple); }
+
+/* ===================================
+   Additional Projects Section
+   =================================== */
+
+.other-projects {
+    background: var(--color-white);
+    padding: var(--space-3xl) 0;
+    margin: var(--space-3xl) 0;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.project-card {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--color-cream);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--color-pink);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.project-card-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card-icon--purple  { background: linear-gradient(135deg, var(--color-purple) 0%, #7b3aa6 100%); }
+.project-card-icon--seafoam { background: linear-gradient(135deg, var(--color-seafoam) 0%, var(--color-teal-dark) 100%); }
+.project-card-icon--pink    { background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink-hover) 100%); }
+
+.project-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-card-meta {
+    font-size: var(--font-size-step2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.project-card-content h3 {
+    font-size: var(--font-size-step5);
+    margin-bottom: var(--space-xs);
+}
+
+.project-card-content p {
+    font-size: var(--font-size-step3);
+    color: var(--color-text-light);
+    line-height: var(--line-height-snug);
+    margin-bottom: 0;
+}
+
+/* Case study approach step icons */
+.approach-step {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+}
+
+.approach-step-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-pink);
+    margin-top: 4px;
+}
+
+.approach-step-body h3 {
+    margin-top: 0;
+}
+
+/* ===================================
+   Footer connect links
+   =================================== */
+
+.connect-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
 }
 
 /* Intro text helper */
@@ -755,7 +888,8 @@ a:focus {
     }
 
     .work-grid,
-    .differentiators-grid {
+    .differentiators-grid,
+    .project-cards {
         grid-template-columns: 1fr;
     }
 
