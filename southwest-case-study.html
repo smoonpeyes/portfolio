@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Case study: Designing airline operations at scale as solo designer supporting 5 products, 10 apps, and 3 product owners."
+    />
+    <title>Southwest Airlines - Designing at Scale | Layla</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Home">Layla Soileau</a>
+
+        <button
+          class="mobile-menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="main">
+      <!-- Case Study Header -->
+      <section class="case-study-header">
+        <div class="container-narrow">
+          <h1>Designing Airline Operations at Scale</h1>
+          <p style="font-size: 1.25rem; opacity: 0.95">
+            Building sustainable design processes while supporting 5 products,
+            10 apps, and 3 product owners as a solo designer.
+          </p>
+
+          <div class="case-study-meta">
+            <div class="meta-item">
+              <span class="meta-label">Company</span>
+              <span>Southwest Airlines (via Amdocs Studios)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Timeline</span>
+              <span>2022-Present</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span>Principal Designer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Focus</span>
+              <span>Enterprise Tools, Process Design, Research</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study Content -->
+      <article class="container-narrow">
+        <!-- Challenge Section -->
+        <section class="case-study-section">
+          <h2>The Challenge</h2>
+          <p>
+            I'm the solo designer supporting Southwest's crew operations—5
+            products, 10 apps, 3 product owners, and 3 dev teams. My users range
+            from flight attendants and pilots to planners and schedulers who
+            manage airline operations.
+          </p>
+
+          <p>
+            <strong>But I'm not actually alone:</strong> I also support 3 other
+            designers. I'm responsible for approving their work and facilitating
+            weekly design reviews. This adds another layer of complexity—I'm
+            designing products while also ensuring quality and consistency
+            across a growing team.
+          </p>
+
+          <p>
+            The scale is one challenge. The complexity is another. Airline crew
+            bidding involves seniority rules, union contract terms (SWAPA),
+            federal regulations, and preferences that affect people's
+            lives—their vacation time, their holidays with family, their income.
+          </p>
+
+          <p>
+            Currently, pilots can use an antiquated internal system or pay for a
+            third-party app. Neither is great. We're building something better,
+            but designing for highly regulated, safety-critical operations means
+            I can't just ship fast and iterate. Every decision needs careful
+            validation.
+          </p>
+
+          <p>
+            <strong>The real challenge:</strong> How do you design at this
+            scale, with this complexity, while also growing and guiding a design
+            team, without becoming a bottleneck?
+          </p>
+        </section>
+
+        <!-- Image Showcase: Scale Visualization -->
+        <section class="image-showcase slate-bg">
+          <div class="image-showcase-content">
+            <img
+              src="images/SWA - Role.png"
+              alt="Diagram showing Southwest crew operations ecosystem: 5 products spanning 10 apps serving Flight Attendants, Pilots, Planners, and Schedulers"
+              class="showcase-image"
+            />
+            <p class="image-caption">
+              Supporting 5 products and 10 apps across Flight Attendants,
+              Pilots, Planners, and Schedulers—leading a team of 4 designers
+              while working with 3 product owners and 3 development teams.
+            </p>
+          </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section class="case-study-section">
+          <h2>Building a Sustainable Process</h2>
+          <p>
+            When I started on Southwest, there was no clear intake system.
+            Requests came from three different product owners at unpredictable
+            times. I was constantly context-switching, priorities weren't clear,
+            and stakeholders were frustrated.
+          </p>
+
+          <p>
+            <strong
+              >I needed to design the system that would let me design the
+              systems.</strong
+            >
+          </p>
+
+          <div class="approach-grid">
+            <div class="approach-card">
+              <h3>
+                <i
+                  data-lucide="clipboard-list"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                ></i
+                >The intake process
+              </h3>
+              <p>
+                Working with a product manager, I experimented with different
+                approaches and landed on a Jira form that puts design requests
+                into my backlog. Product owners submit stories, and the product
+                lead decides priorities during PI planning.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <h3>
+                <i
+                  data-lucide="check-circle"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                ></i
+                >The review workflow
+              </h3>
+              <p>
+                For every UX story: design → design team review → product/tech
+                review → business/user approval. This ensures quality and
+                buy-in, but more importantly, it scales. Anyone can follow this
+                process.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <h3>
+                <i
+                  data-lucide="users"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                ></i
+                >Weekly design reviews
+              </h3>
+              <p>
+                I facilitate weekly design reviews where our team of 4 designers
+                shares work, gives feedback, and maintains consistency across
+                products. I'm responsible for approving work before it moves
+                forward, ensuring quality and alignment with design standards.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <h3>
+                <i
+                  data-lucide="message-square"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                ></i
+                >Figma annotations
+              </h3>
+              <p>
+                I've been experimenting with Figma annotations to communicate
+                implementation details while tracking approvals. Each annotation
+                documents design decisions, specs, and sign-offs—all in one
+                place.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Image Showcase: Figma Annotations -->
+        <section class="image-showcase seafoam-bg">
+          <div class="image-showcase-content">
+            <img
+              src="https://via.placeholder.com/1200x700/00D9A3/2d2d2d?text=Figma+Annotations+System"
+              alt="Figma file showing design annotations with implementation specs and approval tracking"
+              class="showcase-image"
+            />
+            <p class="image-caption">
+              Figma annotations serve double duty—communicating implementation
+              specs to developers while tracking stakeholder approvals. This
+              system reduces miscommunication and creates accountability across
+              teams.
+            </p>
+          </div>
+        </section>
+
+        <!-- RITE Study Section -->
+        <section class="case-study-section">
+          <h2>Example: Flight Ops Vacation Bid</h2>
+          <p>
+            My current project is redesigning how pilots bid for vacation. The
+            existing system is so antiquated that many pilots pay for
+            third-party apps rather than use the free internal tool.
+          </p>
+
+          <p>
+            <strong>The complexity:</strong> Pilots bid by seniority, and bid
+            rounds are dictated by the SWAPA union contract. Miss your bid
+            window or misunderstand the rules? You might lose out on Christmas
+            with your family.
+          </p>
+
+          <p>
+            <strong>The technical constraint:</strong> The app is responsive web
+            designed for landscape mode on pilots' iPads—a specific use case
+            that shapes every design decision.
+          </p>
+
+          <h3>The RITE study</h3>
+          <p>
+            I partnered with a researcher who facilitated sessions with pilots
+            to test different approaches to the bidding flow. While the
+            researcher ran the sessions, I synthesized the findings and created
+            the readout presentation for stakeholders.
+          </p>
+        </section>
+
+        <!-- Image Showcase: RITE Concepts -->
+        <section class="image-showcase pink-bg">
+          <div class="image-showcase-content">
+            <div class="image-grid">
+              <img
+                src="images/4ConceptsVA.png"
+                alt="Vacation bidding concept A showing wizard-based approach"
+                class="showcase-image"
+              />
+            </div>
+            <p class="image-caption">
+              Four approaches to vacation bidding, each tested with pilots in
+              RITE sessions. No single concept emerged as the clear winner—each
+              had unique strengths that informed the final design direction.
+            </p>
+          </div>
+        </section>
+
+        <!-- Key Findings -->
+        <section class="case-study-section">
+          <div class="key-insight">
+            <h4>Key Findings</h4>
+            <p>
+              No single concept was a clear winner—each had strengths. Most
+              pilots didn't understand key contract terms like "bid group."
+            </p>
+          </div>
+
+          <p>
+            <strong>My approach going forward:</strong> Synthesize the best
+            elements from each concept and run another round of testing. This
+            iterative, evidence-based approach is critical when you're designing
+            for people's livelihoods.
+          </p>
+        </section>
+
+        <!-- Image Showcase: Research Synthesis -->
+        <section class="image-showcase">
+          <div class="image-showcase-content">
+            <img
+              src="images/VA-Concept-Strategy 1.png"
+              alt="Slide from RITE study readout presentation showing key findings and insights"
+              class="showcase-image"
+            />
+            <p class="image-caption">
+              Key findings from the RITE study presented to stakeholders.
+              Understanding that pilots didn't grasp "bid group" terminology led
+              to significant design changes in how we explain union contract
+              terms.
+            </p>
+          </div>
+        </section>
+
+        <!-- Working at Scale Section -->
+        <section class="case-study-section">
+          <h2>Working at Scale</h2>
+
+          <h3>Jetstream Design System</h3>
+          <p>
+            I work within Southwest's Jetstream design system, which provides
+            constraints but also consistency. Rather than designing from scratch
+            every time, I leverage existing patterns and components, adapting
+            them for crew operations use cases.
+          </p>
+
+          <h3>Managing priorities</h3>
+          <p>
+            With 3 product owners and 10 apps, I can't work on everything. The
+            PI planning process helps, but I also communicate clearly about
+            capacity, timelines, and tradeoffs. I've learned to say "yes, and
+            here's when" instead of just "yes."
+          </p>
+
+          <h3>Cross-team collaboration</h3>
+          <p>
+            I work with 3 dev teams at different speeds and in different time
+            zones. Weekly syncs, clear documentation, and early tech lead
+            involvement keep us aligned.
+          </p>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact">
+          <h3>Impact</h3>
+          <p>
+            More importantly, I've built a design process that works at scale.
+            The intake system, review workflow, and collaboration patterns I've
+            established will continue working long after I move on.
+          </p>
+
+          <p>
+            <strong>This work is ongoing.</strong> The vacation bidding tool is
+            still in development, the processes I've built continue to evolve,
+            and I'm learning every day how to design better at scale.
+          </p>
+        </section>
+
+        <!-- Reflection Section -->
+        <section class="case-study-section">
+          <h2>What I Learned</h2>
+
+          <div class="pull-quote">
+            You can't design at scale alone—you have to design the system.
+          </div>
+
+          <p>
+            Building intake processes, review workflows, and clear
+            prioritization isn't glamorous, but it's what makes good design
+            possible when you're supporting this many products.
+          </p>
+
+          <div class="key-insight">
+            <h4>Leading designers is different from doing design</h4>
+            <p>
+              Facilitating weekly design reviews and approving work taught me
+              that good leadership means asking the right questions, not giving
+              all the answers. My job is to help designers think through
+              problems, not solve them for them.
+            </p>
+          </div>
+
+          <p>
+            <strong>Research saves time, even when it's slow.</strong> The RITE
+            study revealed misunderstandings that would have led to a failed
+            product. Iterating early with users is always faster than fixing a
+            broken tool in production.
+          </p>
+
+          <p>
+            <strong>Constraints are features.</strong> Working within the
+            Jetstream design system and SWAPA contract rules felt limiting at
+            first, but constraints force creative problem-solving. I can't just
+            design anything—I have to design the right thing.
+          </p>
+
+          <p>
+            <strong>Communication is design work.</strong> Managing 3 POs, 3 dev
+            teams, multiple stakeholders, and 3 designers requires as much craft
+            as the interfaces themselves. Clear communication,
+            expectation-setting, and transparency are how you scale.
+          </p>
+
+          <p>
+            <strong>Experiment with your own processes.</strong> The Jira intake
+            form, Figma annotations, review workflows, design reviews—none of
+            these existed when I started. I built them by experimenting, getting
+            feedback, and iterating. Design operations is design work too.
+          </p>
+
+          <p>
+            That's the work I love—not just making products, but making the
+            systems that make great products possible and helping designers
+            grow.
+          </p>
+        </section>
+
+        <!-- Navigation to other case studies -->
+        <nav class="case-study-nav" aria-label="Other case studies">
+          <a href="case-study.html">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">HEB Accessibility Program</span>
+          </a>
+          <a href="index.html">
+            <span class="nav-label">Back to</span>
+            <span class="nav-title">All Work</span>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-content">
+        <div>
+          <h3>Layla</h3>
+          <p>
+            Principal UX Designer<br />
+            Austin, TX
+          </p>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <p>
+            <a href="mailto:your.email@example.com">your.email@example.com</a
+            ><br />
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </p>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Currently</h3>
+          <p>
+            Principal Designer at Amdocs Studios, working on Southwest Airlines.
+            Exploring new opportunities. Revising TV pilots. Drumming in an
+            all-women surf rock band.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Layla. All rights reserved. Designed and built with
+          accessibility in mind.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+      const navList = document.querySelector(".nav-list");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        const isExpanded =
+          mobileMenuToggle.getAttribute("aria-expanded") === "true";
+        mobileMenuToggle.setAttribute("aria-expanded", !isExpanded);
+        navList.classList.toggle("active");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-container")) {
+          navList.classList.remove("active");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Close menu on escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navList.classList.contains("active")) {
+          navList.classList.remove("active");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+          mobileMenuToggle.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
