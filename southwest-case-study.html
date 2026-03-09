@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Case study: Designing airline operations at scale as solo designer supporting 5 products, 10 apps, and 3 product owners."
+      content="Case study: Designing vacation bidding for 11,000 Southwest pilots — replacing a 20-year-old scheduling tool with a decision-support system built around how pilots actually think."
     />
-    <title>Southwest Airlines - Designing at Scale | Layla</title>
+    <title>Southwest Airlines - Designing Vacation Bidding for 11,000 Pilots | Layla</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,10 +53,11 @@
       <!-- Case Study Header -->
       <section class="case-study-header">
         <div class="container-narrow">
-          <h1>Designing Airline Operations at Scale</h1>
+          <h1>Designing Vacation Bidding for 11,000 Pilots</h1>
           <p style="font-size: 1.25rem; opacity: 0.95">
-            Building sustainable design processes while supporting 5 products,
-            10 apps, and 3 product owners as a solo designer.
+            Replacing a 20-year-old scheduling tool with a decision-support
+            system built around how pilots actually think — and the union
+            contract rules that govern their time off.
           </p>
 
           <div class="case-study-meta">
@@ -66,7 +67,7 @@
             </div>
             <div class="meta-item">
               <span class="meta-label">Timeline</span>
-              <span>2022-Present</span>
+              <span>2022–Present</span>
             </div>
             <div class="meta-item">
               <span class="meta-label">Role</span>
@@ -74,7 +75,7 @@
             </div>
             <div class="meta-item">
               <span class="meta-label">Focus</span>
-              <span>Enterprise Tools, Process Design, Research</span>
+              <span>Decision-Support Design, Enterprise UX, Research, Design Systems</span>
             </div>
           </div>
         </div>
@@ -82,44 +83,55 @@
 
       <!-- Case Study Content -->
       <article class="container-narrow">
-        <!-- Challenge Section -->
+        <!-- The Problem Section -->
         <section class="case-study-section">
-          <h2>The Challenge</h2>
+          <h2>The Problem</h2>
           <p>
-            I'm the solo designer supporting Southwest's crew operations—5
-            products, 10 apps, 3 product owners, and 3 dev teams. My users range
-            from flight attendants and pilots to planners and schedulers who
-            manage airline operations.
+            Southwest pilots bid for vacation every year. Who gets what depends
+            on seniority — senior pilots pick first, everyone else works around
+            them. It's a high-stakes process. Miss your bid window or
+            misunderstand the rules and you might lose Christmas with your
+            family.
           </p>
 
           <p>
-            <strong>But I'm not actually alone:</strong> I also support 3 other
-            designers. I'm responsible for approving their work and facilitating
-            weekly design reviews. This adds another layer of complexity—I'm
-            designing products while also ensuring quality and consistency
-            across a growing team.
+            The tool pilots use to bid is nearly 20 years old. It wasn't
+            designed around their union contract (SWAPA) requirements, and it
+            doesn't work well on their primary work device — an iPad Pro used in
+            landscape mode, often in the cockpit. The result: many pilots pay
+            out of pocket for third-party apps rather than use the free internal
+            tool.
           </p>
 
-          <p>
-            The scale is one challenge. The complexity is another. Airline crew
-            bidding involves seniority rules, union contract terms (SWAPA),
-            federal regulations, and preferences that affect people's
-            lives—their vacation time, their holidays with family, their income.
-          </p>
+          <p>That's the problem I was brought in to solve.</p>
 
+          <h3>The constraint environment</h3>
           <p>
-            Currently, pilots can use an antiquated internal system or pay for a
-            third-party app. Neither is great. We're building something better,
-            but designing for highly regulated, safety-critical operations means
-            I can't just ship fast and iterate. Every decision needs careful
-            validation.
+            Every design decision was shaped by four hard constraints:
           </p>
-
-          <p>
-            <strong>The real challenge:</strong> How do you design at this
-            scale, with this complexity, while also growing and guiding a design
-            team, without becoming a bottleneck?
-          </p>
+          <ul>
+            <li>
+              <strong>Union contract rules (SWAPA):</strong> Bid windows,
+              seniority order, and bid group structures are all contractually
+              defined. The design has to reflect the contract accurately or
+              pilots make costly mistakes.
+            </li>
+            <li>
+              <strong>Device context:</strong> iPad Pro, landscape mode, dark
+              mode. Pilots use this device for other work activities — sometimes
+              in the cockpit. The interface has to work in that environment.
+            </li>
+            <li>
+              <strong>High personal stakes:</strong> Vacation weeks aren't just
+              time off. They represent family commitments, personal milestones,
+              and life priorities planned months in advance.
+            </li>
+            <li>
+              <strong>Seniority complexity:</strong> What's a realistic bid for
+              one pilot may be completely unattainable for another. The tool
+              needs to account for where each pilot sits in the seniority list.
+            </li>
+          </ul>
         </section>
 
         <!-- Image Showcase: Scale Visualization -->
@@ -131,28 +143,197 @@
               class="showcase-image"
             />
             <p class="image-caption">
-              Supporting 5 products and 10 apps across Flight Attendants,
-              Pilots, Planners, and Schedulers—leading a team of 4 designers
-              while working with 3 product owners and 3 development teams.
+              5 products, 10 apps, 4 user types — pilots, flight attendants,
+              planners, and schedulers — all governed by union contract rules and
+              federal scheduling requirements.
             </p>
           </div>
         </section>
 
-        <!-- Approach Section -->
+        <!-- The Design Challenge Section -->
         <section class="case-study-section">
-          <h2>Building a Sustainable Process</h2>
+          <h2>The Design Challenge</h2>
           <p>
-            When I started on Southwest, there was no clear intake system.
-            Requests came from three different product owners at unpredictable
-            times. I was constantly context-switching, priorities weren't clear,
-            and stakeholders were frustrated.
+            The old system let pilots rank weeks of the year in order of
+            preference. Simple, but fundamentally misaligned with how vacation
+            bidding actually works under the SWAPA contract.
           </p>
 
           <p>
-            <strong
-              >I needed to design the system that would let me design the
-              systems.</strong
-            >
+            The new system needed to support bid groups — clusters of 2–3 weeks
+            that pilots submit as a unit, depending on the bid round. Instead of
+            saying "I want week 52, week 26, week 1," pilots can now say:
+          </p>
+          <ul>
+            <li><strong>Primary:</strong> Christmas week + July 4th week</li>
+            <li>
+              <strong>Fallback:</strong> Christmas week + any week in July
+            </li>
+            <li>
+              <strong>Backup:</strong> Any week in December + any week in summer
+            </li>
+          </ul>
+
+          <p>
+            That's a strategy builder, not a ranked list. It's a fundamentally
+            different cognitive task — and a much harder design problem.
+          </p>
+        </section>
+
+        <!-- Research Section -->
+        <section class="case-study-section">
+          <h2>Research</h2>
+          <p>
+            Before designing, I needed to understand how pilots think about
+            vacation — not how the contract defines it.
+          </p>
+
+          <p>
+            I partnered with a researcher to run a RITE (Rapid Iterative Testing
+            and Evaluation) study with pilots, testing four different concept
+            approaches to the bidding flow. While the researcher facilitated
+            sessions, I synthesized findings and created the readout
+            presentation for stakeholders.
+          </p>
+
+          <h3>What we tested</h3>
+          <p>
+            Four concepts, each taking a different approach to the core
+            interaction:
+          </p>
+          <ul>
+            <li>A wizard-based flow that guided pilots step by step</li>
+            <li>An overview-first approach showing all options upfront</li>
+            <li>A calendar-based visual model</li>
+            <li>A hybrid approach combining ranking with group selection</li>
+          </ul>
+
+          <h3>What pilots told us</h3>
+          <div class="pull-quote">
+            "It's not a term we use." — Pilot, on the term "bid group"
+          </div>
+
+          <p>
+            "Are we putting the cart before the horse for this one? Rank all
+            weeks, then rank all holiday weeks?" — Pilot, on concept sequencing
+          </p>
+
+          <p>
+            "I think for most people, holidays are important, but personal
+            things are more important." — Pilot, on what vacation bidding is
+            really about
+          </p>
+
+          <div class="key-insight">
+            <h4>Key Findings</h4>
+            <p>
+              No single concept emerged as a clear winner — each had distinct
+              strengths. More importantly, the research revealed a fundamental
+              terminology problem: pilots don't use the same language as the
+              contract. A tool built around contract terms creates confusion
+              before pilots even start bidding.
+            </p>
+          </div>
+
+          <p>
+            <strong>Design direction:</strong> Synthesize the strongest elements
+            from each concept, reframe the language around how pilots actually
+            talk about vacation, and run another round of testing.
+          </p>
+        </section>
+
+        <!-- Image Showcase: RITE Concepts -->
+        <section class="image-showcase pink-bg">
+          <div class="image-showcase-content">
+            <div class="image-grid">
+              <img
+                src="images/4ConceptsVA.png"
+                alt="Four vacation bidding concepts tested in RITE sessions with pilots"
+                class="showcase-image"
+              />
+            </div>
+            <p class="image-caption">
+              Four concepts tested in RITE sessions with pilots. No single
+              approach won — each revealed something different about how pilots
+              think about vacation strategy.
+            </p>
+          </div>
+        </section>
+
+        <!-- Image Showcase: Research Synthesis -->
+        <section class="image-showcase">
+          <div class="image-showcase-content">
+            <img
+              src="images/VA-Concept-Strategy 1.png"
+              alt="Slide from RITE study readout presenting recommended synthesis direction"
+              class="showcase-image"
+            />
+            <p class="image-caption">
+              Recommended direction: synthesize the strongest elements from each
+              concept and retest. Iteration over assumption.
+            </p>
+          </div>
+        </section>
+
+        <!-- The Solution Direction Section -->
+        <section class="case-study-section">
+          <h2>The Solution Direction</h2>
+          <p>
+            The redesign is built around two core features working together.
+          </p>
+
+          <h3>Bid group builder</h3>
+          <p>
+            Instead of ranking individual weeks, pilots build bid groups —
+            primary, fallback, and backup combinations — that reflect their
+            actual vacation strategy. The interface is designed for landscape
+            iPad Pro in dark mode, matching how pilots use their devices in the
+            field.
+          </p>
+
+          <h3>Confidence indicator</h3>
+          <p>
+            Each bid group shows a confidence level — High, Medium, or Low —
+            based on the pilot's seniority position. This gives pilots realistic
+            signal about whether their primary bid is attainable, so they can
+            make smart fallback decisions rather than guessing.
+          </p>
+
+          <p>
+            Together, these features shift the tool from a passive ranking
+            interface to an active decision-support system. Pilots aren't just
+            submitting preferences — they're building a strategy they can trust.
+          </p>
+        </section>
+
+        <!-- Image Showcase: Figma Annotations -->
+        <section class="image-showcase seafoam-bg">
+          <div class="image-showcase-content">
+            <img
+              src="images/SWA - Annotations.png"
+              alt="Figma file showing design annotations with implementation specs and approval tracking"
+              class="showcase-image"
+            />
+            <p class="image-caption">
+              Figma annotations document implementation specs and track
+              stakeholder approvals in one place — reducing miscommunication
+              across 3 dev teams.
+            </p>
+          </div>
+        </section>
+
+        <!-- Process at Scale Section -->
+        <section class="case-study-section">
+          <h2>Process at Scale</h2>
+          <p>
+            The vacation bid tool is one project within a much larger program.
+            As the sole designer supporting 5 products and 10 apps across
+            Southwest crew operations, I also had to design the system that lets
+            me design the systems.
+          </p>
+
+          <p>
+            <strong>What I built</strong>
           </p>
 
           <div class="approach-grid">
@@ -168,13 +349,12 @@
                     margin-right: 8px;
                   "
                 ></i
-                >The intake process
+                >Intake system
               </h3>
               <p>
-                Working with a product manager, I experimented with different
-                approaches and landed on a Jira form that puts design requests
-                into my backlog. Product owners submit stories, and the product
-                lead decides priorities during PI planning.
+                A Jira-based form that routes design requests from 3 product
+                owners into a prioritized backlog, eliminating the constant
+                context-switching that made early work unsustainable.
               </p>
             </div>
 
@@ -190,13 +370,34 @@
                     margin-right: 8px;
                   "
                 ></i
-                >The review workflow
+                >Review workflow
               </h3>
               <p>
-                For every UX story: design → design team review → product/tech
-                review → business/user approval. This ensures quality and
-                buy-in, but more importantly, it scales. Anyone can follow this
-                process.
+                A four-stage process (design → design team review → product/tech
+                review → business approval) that scales across teams and ensures
+                quality without creating bottlenecks.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <h3>
+                <i
+                  data-lucide="message-square"
+                  style="
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                ></i
+                >Figma annotations &amp; Make
+              </h3>
+              <p>
+                A system for documenting implementation specs and tracking
+                stakeholder approvals directly in Figma. Also prototyped a
+                Filter component using Figma Make to reduce development time and
+                accelerate engineering handoff.
               </p>
             </div>
 
@@ -215,244 +416,33 @@
                 >Weekly design reviews
               </h3>
               <p>
-                I facilitate weekly design reviews where our team of 4 designers
-                shares work, gives feedback, and maintains consistency across
-                products. I'm responsible for approving work before it moves
-                forward, ensuring quality and alignment with design standards.
-              </p>
-            </div>
-
-            <div class="approach-card">
-              <h3>
-                <i
-                  data-lucide="message-square"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 8px;
-                  "
-                ></i
-                >Figma annotations
-              </h3>
-              <p>
-                I've been experimenting with Figma annotations to communicate
-                implementation details while tracking approvals. Each annotation
-                documents design decisions, specs, and sign-offs—all in one
-                place.
+                Facilitated weekly reviews for a team of 4 designers, maintaining
+                consistency and quality across 10 apps.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- Image Showcase: Figma Annotations -->
-        <section class="image-showcase seafoam-bg">
-          <div class="image-showcase-content">
-            <img
-              src="https://via.placeholder.com/1200x700/00D9A3/2d2d2d?text=Figma+Annotations+System"
-              alt="Figma file showing design annotations with implementation specs and approval tracking"
-              class="showcase-image"
-            />
-            <p class="image-caption">
-              Figma annotations serve double duty—communicating implementation
-              specs to developers while tracking stakeholder approvals. This
-              system reduces miscommunication and creates accountability across
-              teams.
-            </p>
-          </div>
-        </section>
-
-        <!-- RITE Study Section -->
-        <section class="case-study-section">
-          <h2>Example: Flight Ops Vacation Bid</h2>
-          <p>
-            My current project is redesigning how pilots bid for vacation. The
-            existing system is so antiquated that many pilots pay for
-            third-party apps rather than use the free internal tool.
-          </p>
-
-          <p>
-            <strong>The complexity:</strong> Pilots bid by seniority, and bid
-            rounds are dictated by the SWAPA union contract. Miss your bid
-            window or misunderstand the rules? You might lose out on Christmas
-            with your family.
-          </p>
-
-          <p>
-            <strong>The technical constraint:</strong> The app is responsive web
-            designed for landscape mode on pilots' iPads—a specific use case
-            that shapes every design decision.
-          </p>
-
-          <h3>The RITE study</h3>
-          <p>
-            I partnered with a researcher who facilitated sessions with pilots
-            to test different approaches to the bidding flow. While the
-            researcher ran the sessions, I synthesized the findings and created
-            the readout presentation for stakeholders.
-          </p>
-        </section>
-
-        <!-- Image Showcase: RITE Concepts -->
-        <section class="image-showcase pink-bg">
-          <div class="image-showcase-content">
-            <div class="image-grid">
-              <img
-                src="images/4ConceptsVA.png"
-                alt="Vacation bidding concept A showing wizard-based approach"
-                class="showcase-image"
-              />
-            </div>
-            <p class="image-caption">
-              Four approaches to vacation bidding, each tested with pilots in
-              RITE sessions. No single concept emerged as the clear winner—each
-              had unique strengths that informed the final design direction.
-            </p>
-          </div>
-        </section>
-
-        <!-- Key Findings -->
-        <section class="case-study-section">
-          <div class="key-insight">
-            <h4>Key Findings</h4>
-            <p>
-              No single concept was a clear winner—each had strengths. Most
-              pilots didn't understand key contract terms like "bid group."
-            </p>
-          </div>
-
-          <p>
-            <strong>My approach going forward:</strong> Synthesize the best
-            elements from each concept and run another round of testing. This
-            iterative, evidence-based approach is critical when you're designing
-            for people's livelihoods.
-          </p>
-        </section>
-
-        <!-- Image Showcase: Research Synthesis -->
-        <section class="image-showcase">
-          <div class="image-showcase-content">
-            <img
-              src="images/VA-Concept-Strategy 1.png"
-              alt="Slide from RITE study readout presentation showing key findings and insights"
-              class="showcase-image"
-            />
-            <p class="image-caption">
-              Key findings from the RITE study presented to stakeholders.
-              Understanding that pilots didn't grasp "bid group" terminology led
-              to significant design changes in how we explain union contract
-              terms.
-            </p>
-          </div>
-        </section>
-
-        <!-- Working at Scale Section -->
-        <section class="case-study-section">
-          <h2>Working at Scale</h2>
-
-          <h3>Jetstream Design System</h3>
-          <p>
-            I work within Southwest's Jetstream design system, which provides
-            constraints but also consistency. Rather than designing from scratch
-            every time, I leverage existing patterns and components, adapting
-            them for crew operations use cases.
-          </p>
-
-          <h3>Managing priorities</h3>
-          <p>
-            With 3 product owners and 10 apps, I can't work on everything. The
-            PI planning process helps, but I also communicate clearly about
-            capacity, timelines, and tradeoffs. I've learned to say "yes, and
-            here's when" instead of just "yes."
-          </p>
-
-          <h3>Cross-team collaboration</h3>
-          <p>
-            I work with 3 dev teams at different speeds and in different time
-            zones. Weekly syncs, clear documentation, and early tech lead
-            involvement keep us aligned.
-          </p>
-        </section>
-
-        <!-- Impact Section -->
+        <!-- Current Status Section -->
         <section class="impact">
-          <h3>Impact</h3>
+          <h3>Current Status</h3>
           <p>
-            More importantly, I've built a design process that works at scale.
-            The intake system, review workflow, and collaboration patterns I've
-            established will continue working long after I move on.
+            The redesign is in progress. Concept synthesis is complete and
+            high-fidelity designs are underway. The next step is another round
+            of usability testing with pilots to validate the bid group builder
+            and confidence indicator before moving to engineering handoff.
           </p>
 
           <p>
-            <strong>This work is ongoing.</strong> The vacation bidding tool is
-            still in development, the processes I've built continue to evolve,
-            and I'm learning every day how to design better at scale.
-          </p>
-        </section>
-
-        <!-- Reflection Section -->
-        <section class="case-study-section">
-          <h2>What I Learned</h2>
-
-          <div class="pull-quote">
-            You can't design at scale alone—you have to design the system.
-          </div>
-
-          <p>
-            Building intake processes, review workflows, and clear
-            prioritization isn't glamorous, but it's what makes good design
-            possible when you're supporting this many products.
-          </p>
-
-          <div class="key-insight">
-            <h4>Leading designers is different from doing design</h4>
-            <p>
-              Facilitating weekly design reviews and approving work taught me
-              that good leadership means asking the right questions, not giving
-              all the answers. My job is to help designers think through
-              problems, not solve them for them.
-            </p>
-          </div>
-
-          <p>
-            <strong>Research saves time, even when it's slow.</strong> The RITE
-            study revealed misunderstandings that would have led to a failed
-            product. Iterating early with users is always faster than fixing a
-            broken tool in production.
-          </p>
-
-          <p>
-            <strong>Constraints are features.</strong> Working within the
-            Jetstream design system and SWAPA contract rules felt limiting at
-            first, but constraints force creative problem-solving. I can't just
-            design anything—I have to design the right thing.
-          </p>
-
-          <p>
-            <strong>Communication is design work.</strong> Managing 3 POs, 3 dev
-            teams, multiple stakeholders, and 3 designers requires as much craft
-            as the interfaces themselves. Clear communication,
-            expectation-setting, and transparency are how you scale.
-          </p>
-
-          <p>
-            <strong>Experiment with your own processes.</strong> The Jira intake
-            form, Figma annotations, review workflows, design reviews—none of
-            these existed when I started. I built them by experimenting, getting
-            feedback, and iterating. Design operations is design work too.
-          </p>
-
-          <p>
-            That's the work I love—not just making products, but making the
-            systems that make great products possible and helping designers
-            grow.
+            <strong>This work isn't done — but that's the point.</strong> Good
+            enterprise design is iterative, evidence-driven, and honest about
+            what's still unknown.
           </p>
         </section>
 
         <!-- Navigation to other case studies -->
         <nav class="case-study-nav" aria-label="Other case studies">
-          <a href="case-study.html">
+          <a href="heb-case-study.html">
             <span class="nav-label">Previous</span>
             <span class="nav-title">HEB Accessibility Program</span>
           </a>
@@ -513,8 +503,7 @@
           <h3>Currently</h3>
           <p>
             Principal Designer at Amdocs Studios, working on Southwest Airlines.
-            Exploring new opportunities. Revising TV pilots. Drumming in an
-            all-women surf rock band.
+            Exploring new opportunities.
           </p>
         </div>
       </div>
