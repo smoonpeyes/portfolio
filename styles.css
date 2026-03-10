@@ -492,7 +492,7 @@ a:focus {
 
 .differentiators-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
     margin-top: var(--space-2xl);
     position: relative;
@@ -707,18 +707,19 @@ a:focus {
 .case-study-header {
     background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-light) 100%);
     color: var(--color-cream);
-    padding: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
 }
 
 .case-study-header h1 {
     color: var(--color-cream);
     margin-bottom: var(--space-md);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 .case-study-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    flex-wrap: nowrap;
+    gap: 0;
     margin-top: var(--space-lg);
     font-size: 0.9rem;
     opacity: 0.9;
@@ -727,6 +728,15 @@ a:focus {
 .meta-item {
     display: flex;
     flex-direction: column;
+    padding: 0 var(--space-lg);
+}
+
+.meta-item:first-child {
+    padding-left: 0;
+}
+
+.meta-item + .meta-item {
+    border-left: 1px solid rgba(255, 248, 240, 0.3);
 }
 
 .meta-label {
@@ -784,29 +794,25 @@ a:focus {
 
 /* Pull Quote */
 .pull-quote {
-    background: linear-gradient(135deg, #b8295a 0%, #9c1f4a 100%);
-    color: var(--color-white);
-    padding: var(--space-xl);
-    border-radius: var(--border-radius);
-    margin: var(--space-2xl) 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    text-align: center;
+    border-left: 3px solid var(--color-slate);
+    background: none;
+    padding: 0 0 0 20px;
+    margin: 2em 0;
 }
 
-.pull-quote::before {
-    content: '"';
-    font-size: 3rem;
-    opacity: 0.3;
-    line-height: 0;
+.pull-quote p {
+    font-size: 1.1em;
+    color: #555555;
+    font-style: italic;
+    margin: 0 0 0.4em;
+    line-height: 1.5;
 }
 
-.pull-quote::after {
-    content: '"';
-    font-size: 3rem;
-    opacity: 0.3;
-    line-height: 0;
+.pull-quote cite {
+    display: block;
+    font-size: 0.85em;
+    color: #888888;
+    font-style: normal;
 }
 
 /* Alternating Section Backgrounds */
@@ -849,23 +855,23 @@ a:focus {
     line-height: 1.6;
 }
 
-/* Case Study Images with Colored Backgrounds */
+/* Case Study Images */
 .image-showcase {
-    background: var(--color-white);
+    background: transparent;
     padding: var(--space-2xl) 0;
     margin: var(--space-2xl) 0;
 }
 
 .image-showcase.slate-bg {
-    background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-light) 100%);
+    background: transparent;
 }
 
 .image-showcase.pink-bg {
-    background: linear-gradient(135deg, #E63980 0%, #d6326f 100%);
+    background: transparent;
 }
 
 .image-showcase.seafoam-bg {
-    background: linear-gradient(135deg, var(--color-seafoam) 0%, var(--color-teal-dark) 100%);
+    background: transparent;
 }
 
 .image-showcase-content {
@@ -897,22 +903,9 @@ a:focus {
     margin: 0 auto;
 }
 
-.slate-bg .image-caption,
-.pink-bg .image-caption,
-.seafoam-bg .image-caption {
-    color: var(--color-cream);
-    opacity: 0.9;
-}
-
 .image-caption strong {
     font-weight: 600;
     color: var(--color-text);
-}
-
-.slate-bg .image-caption strong,
-.pink-bg .image-caption strong,
-.seafoam-bg .image-caption strong {
-    color: var(--color-cream);
 }
 
 /* Two Column Image Layout */
@@ -1289,9 +1282,21 @@ a:focus {
     .case-study-nav {
         flex-direction: column;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .case-study-meta {
+        flex-wrap: wrap;
+    }
+
+    .meta-item {
+        padding: 0;
+    }
+
+    .meta-item + .meta-item {
+        border-left: none;
     }
 }
 
