@@ -794,29 +794,25 @@ a:focus {
 
 /* Pull Quote */
 .pull-quote {
-    background: linear-gradient(135deg, #b8295a 0%, #9c1f4a 100%);
-    color: var(--color-white);
-    padding: var(--space-xl);
-    border-radius: var(--border-radius);
-    margin: var(--space-2xl) 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    text-align: center;
+    border-left: 3px solid var(--color-slate);
+    background: none;
+    padding: 0 0 0 20px;
+    margin: 2em 0;
 }
 
-.pull-quote::before {
-    content: '"';
-    font-size: 3rem;
-    opacity: 0.3;
-    line-height: 0;
+.pull-quote p {
+    font-size: 1.1em;
+    color: #555555;
+    font-style: italic;
+    margin: 0 0 0.4em;
+    line-height: 1.5;
 }
 
-.pull-quote::after {
-    content: '"';
-    font-size: 3rem;
-    opacity: 0.3;
-    line-height: 0;
+.pull-quote cite {
+    display: block;
+    font-size: 0.85em;
+    color: #888888;
+    font-style: normal;
 }
 
 /* Alternating Section Backgrounds */

@@ -283,7 +283,8 @@
   /* .problem-grid     — auto-fit minmax(220px); .problem-item flex col with icon   */
   /* .large-text       — 1.375rem / 1.6 lh / medium / slate                         */
   /* .key-insight      — white, seafoam left border, shadow-xs, radius-base         */
-  /* .pull-quote       — pink-dark gradient, white text, 1.5rem, centered           */
+  /* .pull-quote       — slate left border 3px, no bg, pl-20px, 2em v-margin;        */
+  /*                    p: 1.1em italic #555; cite: 0.85em normal #888              */
   /* .image-showcase   — full-bleed section; .slate-bg .pink-bg .seafoam-bg variants */
   /* .showcase-image   — 100% width, radius-base, shadow-lg                         */
   /* .image-caption    — 0.9375rem, text-light, centered (cream on colored bg)      */
