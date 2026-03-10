@@ -707,18 +707,19 @@ a:focus {
 .case-study-header {
     background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-light) 100%);
     color: var(--color-cream);
-    padding: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
 }
 
 .case-study-header h1 {
     color: var(--color-cream);
     margin-bottom: var(--space-md);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 .case-study-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    flex-wrap: nowrap;
+    gap: 0;
     margin-top: var(--space-lg);
     font-size: 0.9rem;
     opacity: 0.9;
@@ -727,6 +728,15 @@ a:focus {
 .meta-item {
     display: flex;
     flex-direction: column;
+    padding: 0 var(--space-lg);
+}
+
+.meta-item:first-child {
+    padding-left: 0;
+}
+
+.meta-item + .meta-item {
+    border-left: 1px solid rgba(255, 248, 240, 0.3);
 }
 
 .meta-label {
@@ -1276,9 +1286,21 @@ a:focus {
     .case-study-nav {
         flex-direction: column;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .case-study-meta {
+        flex-wrap: wrap;
+    }
+
+    .meta-item {
+        padding: 0;
+    }
+
+    .meta-item + .meta-item {
+        border-left: none;
     }
 }
 
