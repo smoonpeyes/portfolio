@@ -849,23 +849,23 @@ a:focus {
     line-height: 1.6;
 }
 
-/* Case Study Images with Colored Backgrounds */
+/* Case Study Images */
 .image-showcase {
-    background: var(--color-white);
+    background: transparent;
     padding: var(--space-2xl) 0;
     margin: var(--space-2xl) 0;
 }
 
 .image-showcase.slate-bg {
-    background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-light) 100%);
+    background: transparent;
 }
 
 .image-showcase.pink-bg {
-    background: linear-gradient(135deg, #E63980 0%, #d6326f 100%);
+    background: transparent;
 }
 
 .image-showcase.seafoam-bg {
-    background: linear-gradient(135deg, var(--color-seafoam) 0%, var(--color-teal-dark) 100%);
+    background: transparent;
 }
 
 .image-showcase-content {
@@ -897,22 +897,9 @@ a:focus {
     margin: 0 auto;
 }
 
-.slate-bg .image-caption,
-.pink-bg .image-caption,
-.seafoam-bg .image-caption {
-    color: var(--color-cream);
-    opacity: 0.9;
-}
-
 .image-caption strong {
     font-weight: 600;
     color: var(--color-text);
-}
-
-.slate-bg .image-caption strong,
-.pink-bg .image-caption strong,
-.seafoam-bg .image-caption strong {
-    color: var(--color-cream);
 }
 
 /* Two Column Image Layout */
