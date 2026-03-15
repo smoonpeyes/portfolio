@@ -1005,6 +1005,14 @@ a:focus {
     margin-top: var(--space-lg);
 }
 
+#what-i-built .project-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#what-i-built .project-card {
+    background: var(--color-white);
+}
+
 .case-study-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1486,13 +1494,17 @@ a:focus {
     .glance-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .problem-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .glance-number {
         font-size: 2rem;
+    }
+
+    #what-i-built .project-cards {
+        grid-template-columns: 1fr;
     }
 }
 
