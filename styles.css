@@ -926,6 +926,25 @@ a:focus {
     color: var(--color-text);
 }
 
+/* Annotated screenshot blocks */
+.annotated-image-block {
+    margin-bottom: 40px;
+}
+
+.annotated-image-block:last-child {
+    margin-bottom: 0;
+}
+
+.image-annotation {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-top: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Two Column Image Layout */
 .image-grid {
     display: grid;
