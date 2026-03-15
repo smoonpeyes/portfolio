@@ -1006,11 +1006,13 @@ a:focus {
 }
 
 #what-i-built .project-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
 }
 
 #what-i-built .project-card {
-    background: var(--color-white);
+    background: var(--color-white) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .case-study-grid {
