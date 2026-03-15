@@ -918,7 +918,7 @@ a:focus {
     color: var(--color-text-light);
     text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto var(--space-lg);
 }
 
 .image-caption strong {
