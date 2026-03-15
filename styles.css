@@ -779,20 +779,8 @@ a:focus {
     background: var(--color-white);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
-    border-left: 4px solid var(--color-pink);
+    border-left: 4px solid var(--color-slate);
     transition: var(--transition);
-}
-
-.approach-card:nth-child(2) {
-    border-left-color: var(--color-seafoam);
-}
-
-.approach-card:nth-child(3) {
-    border-left-color: var(--color-purple);
-}
-
-.approach-card:nth-child(4) {
-    border-left-color: var(--color-pink);
 }
 
 .approach-card:hover {
@@ -1007,12 +995,14 @@ a:focus {
 
 #what-i-built .project-cards {
     grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-md);
 }
 
 #what-i-built .project-card {
     background: var(--color-white) !important;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: var(--space-md);
 }
 
 .case-study-grid {
