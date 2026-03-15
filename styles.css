@@ -876,8 +876,8 @@ a:focus {
 /* Case Study Images */
 .image-showcase {
     background: transparent;
-    padding: var(--space-2xl) 0;
-    margin: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
+    margin: var(--space-lg) 0;
 }
 
 .image-showcase.slate-bg {
@@ -947,7 +947,7 @@ a:focus {
 }
 
 .case-study-section {
-    margin: var(--space-3xl) 0;
+    margin: var(--space-2xl) 0;
 }
 
 .case-study-section h2 {
@@ -973,7 +973,7 @@ a:focus {
 }
 
 #what-i-built {
-    margin-top: var(--space-xl);
+    margin-top: var(--space-lg);
 }
 
 .case-study-grid {
