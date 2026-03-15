@@ -71,8 +71,9 @@ body {
 /* Skip to main content link for accessibility */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
+    transform: translateY(-100%);
     background: var(--color-slate);
     color: var(--color-cream);
     padding: var(--space-sm) var(--space-md);
@@ -82,7 +83,7 @@ body {
 }
 
 .skip-link:focus {
-    top: 0;
+    transform: translateY(0);
 }
 
 /* Typography */
