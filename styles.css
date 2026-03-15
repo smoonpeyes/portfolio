@@ -735,14 +735,6 @@ a:focus {
     opacity: 0.9;
 }
 
-/* Focus item (4th) wraps to its own row */
-.meta-item:last-child {
-    flex-basis: 100%;
-    border-left: none;
-    padding-left: 0;
-    margin-top: var(--space-md);
-}
-
 .meta-item {
     display: flex;
     flex-direction: column;
@@ -755,6 +747,14 @@ a:focus {
 
 .meta-item + .meta-item {
     border-left: 1px solid rgba(255, 248, 240, 0.3);
+}
+
+/* Focus item (4th) wraps to its own row — must come after + .meta-item to win */
+.meta-item:last-child {
+    flex-basis: 100%;
+    border-left: none;
+    padding-left: 0;
+    margin-top: var(--space-md);
 }
 
 .meta-label {
