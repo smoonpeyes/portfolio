@@ -57,6 +57,9 @@
         font-size: 0.875rem;
         line-height: 1.6;
         padding: var(--space-sm) var(--space-md);
+        width: 100%;
+        box-sizing: border-box;
+        flex: 1;
       }
 
       /* ── Impact / Unlocked cards ── */
@@ -234,46 +237,45 @@
           <p>This wasn't just a UX problem. It was a systemic risk hiding in plain sight.</p>
         </section>
 
-        <!-- Constraint Environment Section -->
-        <section class="case-study-section">
-          <h2>The Constraint Environment</h2>
-          <p>
-            Rather than accepting the problem as defined, I started by mapping
-            the real constraints — some inherited, some negotiable.
-          </p>
-          <ul>
-            <li>
-              <strong>A small, expert user base:</strong> Planners aren't
-              typical users. They know the SWAPA contract in detail. The tool
-              had to meet their mental model, not simplify it away — which meant
-              resisting the instinct to abstract complexity that experts need to
-              see.
-            </li>
-            <li>
-              <strong>Layered contract requirements:</strong> The SWAPA contract
-              defines weekly minimums, monthly minimums, and seasonal minimums —
-              separately for Captains and First Officers, across every base. Any
-              tool that couldn't surface all of it simultaneously would just
-              replicate the spreadsheet's core failure.
-            </li>
-            <li>
-              <strong>Contract change as a design requirement:</strong> Minimum
-              percentages aren't permanent. I identified early that designing for
-              the current contract values would create future engineering debt
-              every time the contract was renegotiated. Making minimums editable
-              by planners wasn't a feature request — it was a strategic decision
-              I brought to the team.
-            </li>
-            <li>
-              <strong>Jetstream design system:</strong> Working within
-              Southwest's established design system meant no custom components.
-              The challenge was achieving the data density and compliance
-              intelligence this tool required using existing patterns — and
-              identifying where the system needed to grow to support operational
-              use cases it wasn't built for.
-            </li>
-          </ul>
-        </section>
+      </article>
+
+      <!-- Constraint Environment Section — full-bleed -->
+      <section class="differentiators">
+        <div class="container-narrow">
+          <h2>Where the Complexity Lives</h2>
+          <p class="intro-text">Rather than accepting the problem as defined, I started by mapping the real constraints — some inherited, some negotiable.</p>
+
+          <div class="differentiators-grid">
+
+            <div class="differentiator">
+              <i data-lucide="brain" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <h3>A small, expert user base</h3>
+              <p>Planners aren't typical users. They know the SWAPA contract in detail. The tool had to meet their mental model, not simplify it away — which meant resisting the instinct to abstract complexity that experts need to see.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="layers" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Layered contract requirements</h3>
+              <p>The SWAPA contract defines weekly minimums, monthly minimums, and seasonal minimums — separately for Captains and First Officers, across every base. Any tool that couldn't surface all of it simultaneously would just replicate the spreadsheet's core failure.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="file-clock" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <h3>Contract change as a design requirement</h3>
+              <p>Minimum percentages aren't permanent. I identified early that designing for the current contract values would create future engineering debt every time the contract was renegotiated. Making minimums editable by planners wasn't a feature request — it was a strategic decision I brought to the team.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="component" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Jetstream design system</h3>
+              <p>Working within Southwest's established design system meant no custom components. The challenge was achieving the data density and compliance intelligence this tool required using existing patterns — and identifying where the system needed to grow to support operational use cases it wasn't built for.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <article class="container-narrow">
 
         <!-- Discovery Section -->
         <section class="case-study-section">
