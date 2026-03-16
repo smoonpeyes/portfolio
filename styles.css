@@ -44,7 +44,7 @@
     
     /* Layout */
     --max-width: 1200px;
-    --max-width-narrow: 800px;
+    --max-width-narrow: 1000px;
     --border-radius: 12px;
     
     /* Transitions */
@@ -1034,10 +1034,19 @@ a:focus {
 /* Impact/Results Section */
 .impact {
     background: var(--color-white);
-    padding: var(--space-2xl);
+    padding: var(--space-2xl) var(--space-lg);
     border-radius: var(--border-radius);
     border-left: 4px solid var(--color-pink);
     margin: var(--space-2xl) 0;
+}
+
+.impact .differentiators-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.impact .differentiator {
+    padding: var(--space-lg) var(--space-md);
 }
 
 .impact h3 {
