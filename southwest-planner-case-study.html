@@ -52,11 +52,28 @@
 
       .carousel-caption {
         border-top: 1px solid var(--color-border);
-        background: var(--color-cream);
+        background: #f8fafc;
         color: var(--color-text-light);
         font-size: 0.875rem;
         line-height: 1.6;
         padding: var(--space-sm) var(--space-md);
+      }
+
+      /* ── Impact / Unlocked cards ── */
+      .impact {
+        background: none;
+        border-left: none;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .impact h3 {
+        color: var(--color-slate);
+        margin-bottom: var(--space-lg);
+      }
+
+      .impact .differentiators-grid {
+        margin-top: 0;
       }
 
       .carousel-controls {
@@ -461,38 +478,33 @@
         <!-- What This Work Unlocked Section -->
         <section class="impact">
           <h3>What This Work Unlocked</h3>
-          <ul>
-            <li>
-              <strong>Collaborative discovery as a design method.</strong> When
-              your users are domain experts and stakeholders simultaneously,
-              traditional research creates friction. Facilitated working
-              sessions produced better insights faster — and built the
-              cross-functional alignment that made the rest of the project move
-              quickly. This approach is now part of how the broader design team
-              approaches stakeholder-heavy projects.
-            </li>
-            <li>
-              <strong>Compliance feedback as decision support.</strong> The
-              inline error system wasn't just a UX improvement — it changed how
-              planners work. Instead of building a complete scenario and then
-              checking compliance, they now catch and correct issues in real
-              time. The tool shifted their workflow from reactive to proactive.
-            </li>
-            <li>
-              <strong>Designing for the contract change cycle.</strong> The
-              editable minimums feature eliminated a category of engineering
-              requests that would have recurred every contract cycle. Giving
-              operational teams ownership over their own configuration reduced
-              organizational dependency and made the tool genuinely sustainable.
-            </li>
-            <li>
-              <strong>Operational tools deserve the same craft as consumer products.</strong>
-              The planners using this tool are making decisions that affect
-              11,000 pilots' vacation time — and by extension, their families.
-              High stakes deserve high craft, even when the user base is small
-              and the work is invisible to the outside world.
-            </li>
-          </ul>
+          <div class="differentiators-grid">
+
+            <div class="differentiator">
+              <i data-lucide="git-branch" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Collaborative discovery as a design method</h3>
+              <p>When your users are domain experts and stakeholders simultaneously, traditional research creates friction. Facilitated working sessions produced better insights faster — and built the cross-functional alignment that made the rest of the project move quickly. This approach is now part of how the broader design team approaches stakeholder-heavy projects.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="shield-check" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <h3>Compliance feedback as decision support</h3>
+              <p>The inline error system wasn't just a UX improvement — it changed how planners work. Instead of building a complete scenario and then checking compliance, they now catch and correct issues in real time. The tool shifted their workflow from reactive to proactive.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="refresh-cw" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <h3>Designing for the contract change cycle</h3>
+              <p>The editable minimums feature eliminated a category of engineering requests that would have recurred every contract cycle. Giving operational teams ownership over their own configuration reduced organizational dependency and made the tool genuinely sustainable.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="gem" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Operational tools deserve the same craft</h3>
+              <p>The planners using this tool are making decisions that affect 11,000 pilots' vacation time — and by extension, their families. High stakes deserve high craft, even when the user base is small and the work is invisible to the outside world.</p>
+            </div>
+
+          </div>
         </section>
 
         <!-- Navigation to other case studies -->
