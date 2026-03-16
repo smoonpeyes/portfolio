@@ -1031,6 +1031,24 @@ a:focus {
     margin-bottom: 0;
 }
 
+/* Solution capability cards — 3 across */
+.solution-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.solution-cards .differentiator {
+    padding: var(--space-lg) var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .solution-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Impact/Results Section */
 .impact {
     background: var(--color-white);
