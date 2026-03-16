@@ -30,7 +30,7 @@
         position: relative;
         overflow: hidden;
         border-radius: var(--border-radius);
-        background: var(--color-slate);
+        border: 1px solid var(--color-border);
       }
 
       .carousel-track {
@@ -48,16 +48,15 @@
         width: 100%;
         height: auto;
         display: block;
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
       }
 
       .carousel-caption {
-        background: var(--color-slate);
-        color: rgba(255, 255, 255, 0.85);
+        border-top: 1px solid var(--color-border);
+        background: var(--color-cream);
+        color: var(--color-text-light);
         font-size: 0.875rem;
         line-height: 1.6;
-        padding: var(--space-md) var(--space-lg);
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        padding: var(--space-sm) var(--space-md);
       }
 
       .carousel-controls {
@@ -69,8 +68,8 @@
       }
 
       .carousel-btn {
-        background: none;
-        border: 1.5px solid var(--color-slate);
+        background: var(--color-white);
+        border: 1.5px solid var(--color-border);
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -78,14 +77,14 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: var(--color-slate);
+        color: var(--color-text);
         transition: var(--transition);
         flex-shrink: 0;
       }
 
       .carousel-btn:hover {
-        background: var(--color-slate);
-        color: var(--color-white);
+        border-color: var(--color-slate);
+        color: var(--color-slate);
       }
 
       .carousel-btn:disabled {
@@ -103,8 +102,8 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: var(--color-slate);
-        opacity: 0.25;
+        background: var(--color-text-light);
+        opacity: 0.3;
         border: none;
         cursor: pointer;
         padding: 0;
@@ -113,6 +112,7 @@
 
       .carousel-dot.active {
         opacity: 1;
+        background: var(--color-slate);
       }
     </style>
   </head>
