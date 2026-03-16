@@ -189,7 +189,7 @@
             </div>
             <div class="meta-item">
               <span class="meta-label">Focus</span>
-              <span>Enterprise Tools, Data-Dense Interfaces, Compliance Design, Design Systems</span>
+              <span>Enterprise Tools, Compliance Design, Data-Dense Interfaces, Design Systems</span>
             </div>
           </div>
         </div>
@@ -202,12 +202,7 @@
         <section class="case-study-section">
           <h2>The Problem</h2>
           <p>
-            Southwest planners are responsible for one of the most consequential
-            decisions in the vacation bidding process — determining how many
-            slots are available each week of the year, across every base, for
-            every pilot role, before a single bid is submitted. Get it wrong and
-            11,000 pilots bid against inaccurate data. Miss a contract minimum
-            and the airline risks a grievance.
+            Before vacation bidding opens for 11,000 pilots, planners decide how many vacation slots are available each week — by base, by role, by month — while staying within SWAPA contract requirements. Get it wrong and pilots bid against inaccurate data. Miss a contract minimum and the airline risks a grievance.
           </p>
 
           <p>They were doing this in a multi-tab Excel spreadsheet with macros.</p>
@@ -226,15 +221,6 @@
             </p>
           </div>
 
-          <p>
-            The spreadsheet tracked weekly and monthly slot allocations across
-            every Southwest base, calculated percentage totals against annual
-            accruals, flagged seasonal contract minimums, and produced a CSV
-            that had to be manually exported and uploaded into a separate system
-            before bidding could open. A backup copy lived permanently in the
-            tab bar — because losing the file wasn't hypothetical.
-          </p>
-
           <p>This wasn't just a UX problem. It was a systemic risk hiding in plain sight.</p>
         </section>
 
@@ -244,32 +230,32 @@
       <section class="differentiators">
         <div class="container-narrow">
           <h2>Where the Complexity Lives</h2>
-          <p class="intro-text">Rather than accepting the problem as defined, I started by mapping the real constraints — some inherited, some negotiable.</p>
+          <p class="intro-text">Rather than accepting the problem as defined, I mapped the real constraints — some inherited, some negotiable.</p>
 
           <div class="differentiators-grid">
 
             <div class="differentiator">
               <i data-lucide="brain" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
-              <h3>A small, expert user base</h3>
-              <p>Planners aren't typical users. They know the SWAPA contract in detail. The tool had to meet their mental model, not simplify it away — which meant resisting the instinct to abstract complexity that experts need to see.</p>
+              <h3>Expert users, not typical users</h3>
+              <p>Planners know the SWAPA contract in detail. The tool had to match their mental model, not simplify it away.</p>
             </div>
 
             <div class="differentiator">
               <i data-lucide="layers" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
-              <h3>Layered contract requirements</h3>
-              <p>The SWAPA contract defines weekly minimums, monthly minimums, and seasonal minimums — separately for Captains and First Officers, across every base. Any tool that couldn't surface all of it simultaneously would just replicate the spreadsheet's core failure.</p>
+              <h3>Layered compliance requirements</h3>
+              <p>Weekly, monthly, and seasonal minimums — separately for Captains and First Officers, across every base. Any tool that couldn't surface all of it simultaneously would replicate the spreadsheet's core failure.</p>
             </div>
 
             <div class="differentiator">
               <i data-lucide="file-clock" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
               <h3>Contract change as a design requirement</h3>
-              <p>Minimum percentages aren't permanent. I identified early that designing for the current contract values would create future engineering debt every time the contract was renegotiated. Making minimums editable by planners wasn't a feature request — it was a strategic decision I brought to the team.</p>
+              <p>I identified early that designing around current contract values would create engineering debt every time the contract was renegotiated. Making minimums editable by planners was a strategic decision I brought to the team, not a feature request.</p>
             </div>
 
             <div class="differentiator">
               <i data-lucide="component" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
               <h3>Jetstream design system</h3>
-              <p>Working within Southwest's established design system meant no custom components. The challenge was achieving the data density and compliance intelligence this tool required using existing patterns — and identifying where the system needed to grow to support operational use cases it wasn't built for.</p>
+              <p>No custom components. The challenge was achieving the data density this tool required using existing patterns — and identifying where the system needed to grow for operational use cases it wasn't built for.</p>
             </div>
 
           </div>
@@ -282,11 +268,7 @@
         <section class="case-study-section">
           <h2>Discovery</h2>
           <p>
-            With a small team of domain experts as our users, I made a
-            deliberate call to run collaborative working sessions rather than
-            traditional usability research. Planners weren't going to reveal
-            their mental models by completing tasks in a prototype — they needed
-            to map their own workflow to surface where the real friction lived.
+            With a small team of domain experts as users, I made a deliberate call to run collaborative working sessions rather than traditional usability research. Planners needed to map their own workflow to surface where the real friction lived.
           </p>
 
           <div class="annotated-image-block">
@@ -296,58 +278,21 @@
               class="showcase-image"
             />
             <p class="image-caption">
-              User story mapping session with the planning team. Facilitated
-              collaborative discovery sessions to map the allocation workflow
-              end to end — surfacing the scenario modeling planners were already
-              doing mentally, but had no tool support for.
+              User story mapping session with the planning team — surfacing the scenario modeling planners were already doing mentally, but had no tool support for.
             </p>
           </div>
 
           <p>
-            What the sessions revealed changed the design direction. Planners
-            weren't just entering numbers — they were running scenarios in their
-            heads. What happens if we boost December slots at DEN? Does that
-            break a seasonal minimum somewhere else? The spreadsheet forced them
-            to recalculate manually across multiple tabs every time they changed
-            an assumption. The real problem wasn't data entry. It was decision
-            support.
+            What emerged reframed the entire project. Planners weren't just entering numbers — they were running scenarios in their heads. What happens if we boost December slots at DEN? Does that break a seasonal minimum somewhere else? The spreadsheet forced them to recalculate manually every time they changed an assumption.
           </p>
 
-          <p>That insight reframed the entire project.</p>
-        </section>
-
-        <!-- The Design Challenge Section -->
-        <section class="case-study-section">
-          <h2>The Design Challenge</h2>
-          <p>
-            The core question became: how do you turn a compliance calculation
-            into a strategic planning tool — without adding cognitive load for
-            users who are already carrying the full weight of the contract in
-            their heads?
-          </p>
-
-          <p>
-            The answer was to make the tool's intelligence invisible until it's
-            needed. Compliance feedback surfaces in context, at the moment of
-            entry, with specific explanations — not as a separate validation
-            step planners have to seek out. Scenario modeling is structured but
-            lightweight — named, saveable, comparable — without requiring
-            planners to learn a new mental model.
-          </p>
-
-          <p>
-            The goal was a tool that thinks alongside planners, not one that
-            gets in their way.
-          </p>
+          <p>The real problem wasn't data entry. It was decision support.</p>
         </section>
 
         <!-- The Solution Section -->
         <section class="case-study-section">
           <h2>The Solution</h2>
-          <p>
-            The redesign is built around three capabilities that work as a
-            system.
-          </p>
+          <p>Three capabilities working as a system.</p>
 
           <!-- Carousel -->
           <div
@@ -364,11 +309,7 @@
                   alt="Scenarios view showing four named allocation strategies with compliance status indicators"
                 />
                 <p class="carousel-caption">
-                  <strong>Scenario modeling.</strong> The Scenarios view: four named
-                  strategies, compliance status at a glance, and clear indication of
-                  which scenario is active. Summer-Heavy shows Errors — a compliance
-                  violation that must be resolved before it can go live. The tool
-                  makes that visible before it becomes a problem.
+                  <strong>Scenario modeling.</strong> Four named strategies, compliance status at a glance, and clear indication of which scenario is active. Summer-Heavy shows Errors — a violation that must be resolved before it can go live.
                 </p>
               </div>
 
@@ -378,13 +319,7 @@
                   alt="January allocations for ATL Captains and First Officers with inline compliance errors flagged"
                 />
                 <p class="carousel-caption">
-                  <strong>Real-time compliance feedback.</strong> January allocations
-                  for ATL Captains and First Officers. Week 3 for First Officers is
-                  flagged inline: "Weekly minimum must be ≥ 1.5%." The monthly total
-                  also fails its threshold. The right panel shows accrual week
-                  distribution and seasonal minimums simultaneously — required versus
-                  actual, with deltas — so planners see the full compliance picture
-                  without switching views.
+                  <strong>Real-time compliance feedback.</strong> Week 3 for First Officers is flagged inline: "Weekly minimum must be ≥ 1.5%." The right panel shows accrual weeks and seasonal minimums simultaneously — required versus actual, with deltas — so planners see the full compliance picture without switching views.
                 </p>
               </div>
 
@@ -394,11 +329,7 @@
                   alt="Seasonal Monthly Minimums expanded view showing period, minimum percentage, required weeks, actual weeks, and difference"
                 />
                 <p class="carousel-caption">
-                  <strong>Seasonal minimums at a glance.</strong> Seasonal Monthly
-                  Minimums expanded: period, minimum percentage, required weeks,
-                  actual weeks, and difference. Planners can see at a glance where
-                  they stand across the full year — and where they have room to make
-                  strategic adjustments.
+                  <strong>Seasonal minimums at a glance.</strong> Seasonal Monthly Minimums expanded: period, minimum, required, actual, difference. Planners see at a glance where they stand across the full year — and where they have room to make strategic adjustments.
                 </p>
               </div>
 
@@ -408,11 +339,7 @@
                   alt="Settings and Defaults page showing editable contractual minimums for weekly, monthly, and seasonal thresholds"
                 />
                 <p class="carousel-caption">
-                  <strong>Editable contract minimums.</strong> Settings &amp; Defaults:
-                  Contractual Minimums tab. Weekly, monthly flat, and seasonal monthly
-                  minimums are all independently editable. This was a deliberate
-                  architectural decision — not a feature request — to ensure the
-                  tool's longevity across contract negotiations.
+                  <strong>Editable contract minimums.</strong> Contractual Minimums tab. Weekly, monthly, and seasonal minimums are independently editable — a deliberate architectural decision to ensure the tool's longevity across contract negotiations.
                 </p>
               </div>
 
@@ -431,30 +358,17 @@
 
           <h3>Scenario modeling</h3>
           <p>
-            Planners create named scenarios — Baseline, Holiday Buffer,
-            Summer-Heavy, DEN Winter Boost — each representing a different
-            allocation strategy. Scenarios are independently editable,
-            compliance-checked, and comparable. The active scenario feeds the
-            bidding system. The others stay available without being lost.
+            Planners create named scenarios — Baseline, Holiday Buffer, Summer-Heavy, DEN Winter Boost — each representing a different allocation strategy. Scenarios are independently editable, compliance-checked, and comparable. The active scenario feeds the bidding system.
           </p>
 
           <h3>Real-time compliance feedback</h3>
           <p>
-            Every allocation decision is validated against the SWAPA contract
-            as planners work — weekly minimums, monthly minimums, and seasonal
-            minimums — with inline error messages that explain exactly what's
-            failing and what the requirement is. Planners don't hunt for
-            problems. The tool surfaces them in context, at the moment they're
-            created.
+            Every allocation decision is validated against the SWAPA contract as planners work. Inline error messages explain exactly what's failing and what the requirement is — planners don't hunt for problems, the tool surfaces them in context.
           </p>
 
           <h3>Editable contract minimums</h3>
           <p>
-            When the SWAPA contract changes, planners update the tool
-            themselves. No engineering involvement, no redesign cycle. Default
-            minimums and seasonal exceptions are editable directly from the
-            Settings page — keeping the tool accurate across contract cycles and
-            giving the operational team ownership over their own system.
+            When the SWAPA contract changes, planners update the tool themselves. No engineering involvement. Default and seasonal minimums are editable directly from Settings — keeping the tool accurate across contract cycles and giving the operational team ownership over their own system.
           </p>
         </section>
 
@@ -462,19 +376,7 @@
         <section class="case-study-section">
           <h2>System Impact</h2>
           <p>
-            The planner tool and the pilot-facing vacation bidding redesign are
-            two sides of the same system. Planners set the slot availability
-            that pilots bid against. The confidence indicators pilots see —
-            High, Medium, Low odds on their bid groups — are only meaningful if
-            the underlying allocation data is accurate and contract-compliant.
-          </p>
-
-          <p>
-            Designing both ends of that system gave me visibility into how
-            decisions made in the planner tool ripple through to the pilot
-            experience — and shaped design choices on both sides. That kind of
-            end-to-end ownership is rare in enterprise design, and it's where
-            the most important decisions get made.
+            The planner tool and the pilot-facing vacation bidding redesign are two sides of the same system. The confidence indicators pilots see on their bid groups are only meaningful if the underlying allocation data is accurate and compliant. Designing both ends gave me visibility into how planner decisions ripple through to the pilot experience — and shaped design choices on both sides.
           </p>
         </section>
 
@@ -485,26 +387,20 @@
 
             <div class="differentiator">
               <i data-lucide="git-branch" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
-              <h3>Collaborative discovery as a design method</h3>
-              <p>When your users are domain experts and stakeholders simultaneously, traditional research creates friction. Facilitated working sessions produced better insights faster — and built the cross-functional alignment that made the rest of the project move quickly. This approach is now part of how the broader design team approaches stakeholder-heavy projects.</p>
+              <h3>Collaborative discovery scales to expert users</h3>
+              <p>Facilitated working sessions produced better insights faster than traditional research would have — and built the cross-functional alignment that made the project move. This approach is now part of how the broader design team handles stakeholder-heavy projects.</p>
             </div>
 
             <div class="differentiator">
               <i data-lucide="shield-check" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
-              <h3>Compliance feedback as decision support</h3>
-              <p>The inline error system wasn't just a UX improvement — it changed how planners work. Instead of building a complete scenario and then checking compliance, they now catch and correct issues in real time. The tool shifted their workflow from reactive to proactive.</p>
+              <h3>Compliance feedback changes behavior</h3>
+              <p>Planners shifted from building complete scenarios and then checking compliance, to catching and correcting issues in real time. The tool changed how they work, not just what they use.</p>
             </div>
 
             <div class="differentiator">
               <i data-lucide="refresh-cw" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
-              <h3>Designing for the contract change cycle</h3>
-              <p>The editable minimums feature eliminated a category of engineering requests that would have recurred every contract cycle. Giving operational teams ownership over their own configuration reduced organizational dependency and made the tool genuinely sustainable.</p>
-            </div>
-
-            <div class="differentiator">
-              <i data-lucide="gem" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
-              <h3>Operational tools deserve the same craft</h3>
-              <p>The planners using this tool are making decisions that affect 11,000 pilots' vacation time — and by extension, their families. High stakes deserve high craft, even when the user base is small and the work is invisible to the outside world.</p>
+              <h3>Designing for change reduces organizational debt</h3>
+              <p>Editable minimums eliminated a recurring category of engineering requests. Giving operational teams ownership over their own configuration made the tool sustainable across contract cycles.</p>
             </div>
 
           </div>
