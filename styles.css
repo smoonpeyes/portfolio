@@ -334,12 +334,14 @@ a:focus {
     color: var(--color-cream);
     margin-bottom: var(--space-sm);
     font-weight: 700;
+    max-width: 680px;
 }
 
 .hero .subtitle {
     font-size: 1.75rem;
     font-weight: 500;
     font-family: var(--font-body);
+    max-width: 680px;
     margin-bottom: var(--space-lg);
     opacity: 0.95;
     letter-spacing: -0.02em;
@@ -347,8 +349,8 @@ a:focus {
 
 .hero p {
     font-size: 1.125rem;
-    max-width: 700px;
-    margin: 0 auto var(--space-xl);
+    max-width: 680px;
+    margin: 0 0 var(--space-xl);
     opacity: 0.85;
     line-height: 1.7;
 }
