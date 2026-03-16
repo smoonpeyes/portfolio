@@ -335,6 +335,8 @@ a:focus {
     margin-bottom: var(--space-sm);
     font-weight: 700;
     max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .subtitle {
@@ -343,6 +345,8 @@ a:focus {
     font-family: var(--font-body);
     max-width: 680px;
     margin-bottom: var(--space-lg);
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0.95;
     letter-spacing: -0.02em;
 }
@@ -350,7 +354,7 @@ a:focus {
 .hero p {
     font-size: 1.125rem;
     max-width: 680px;
-    margin: 0 0 var(--space-xl);
+    margin: 0 auto var(--space-xl);
     opacity: 0.85;
     line-height: 1.7;
 }
@@ -736,6 +740,11 @@ a:focus {
     color: var(--color-cream);
     margin-bottom: var(--space-md);
     font-size: clamp(2rem, 3.5vw, 3.5rem);
+    max-width: 680px;
+}
+
+.case-study-header p {
+    max-width: 680px;
 }
 
 .case-study-meta {
