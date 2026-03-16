@@ -472,6 +472,14 @@ a:focus {
     margin-top: 0;
 }
 
+/* Collapse gap between Additional Impact and My Superpowers */
+.other-projects + .differentiators {
+    margin-top: 0;
+}
+.other-projects {
+    margin-bottom: 0;
+}
+
 .differentiators + .container-narrow {
     padding-top: 0;
 }
