@@ -119,6 +119,23 @@
         opacity: 1;
         background: var(--color-slate);
       }
+
+      .quotes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+        max-width: none;
+      }
+
+      .quotes-grid .pull-quote {
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .quotes-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -202,36 +219,46 @@
           </p>
 
           <p>That's the problem I was brought in to solve.</p>
-
-          <h3>The constraint environment</h3>
-          <p>
-            Every design decision was shaped by four hard constraints:
-          </p>
-          <ul>
-            <li>
-              <strong>Union contract rules (SWAPA):</strong> Bid windows,
-              seniority order, and bid group structures are all contractually
-              defined. The design has to reflect the contract accurately or
-              pilots make costly mistakes.
-            </li>
-            <li>
-              <strong>Device context:</strong> iPad Pro, landscape mode, dark
-              mode. Pilots use this device for other work activities — sometimes
-              in the cockpit. The interface has to work in that environment.
-            </li>
-            <li>
-              <strong>High personal stakes:</strong> Vacation weeks aren't just
-              time off. They represent family commitments, personal milestones,
-              and life priorities planned months in advance.
-            </li>
-            <li>
-              <strong>Seniority complexity:</strong> What's a realistic bid for
-              one pilot may be completely unattainable for another. The tool
-              needs to account for where each pilot sits in the seniority list.
-            </li>
-          </ul>
         </section>
+      </article>
 
+      <!-- Where the Complexity Lives — full-bleed -->
+      <section class="differentiators">
+        <div class="container-narrow">
+          <h2>Where the Complexity Lives</h2>
+          <p class="intro-text">Every design decision was shaped by four hard constraints.</p>
+
+          <div class="differentiators-grid">
+
+            <div class="differentiator">
+              <i data-lucide="scroll" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <h3>Union contract rules (SWAPA)</h3>
+              <p>Bid windows, seniority order, and bid group structures are all contractually defined. The design has to reflect the contract accurately or pilots make costly mistakes.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="tablet-smartphone" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Device context</h3>
+              <p>iPad Pro, landscape mode, dark mode. Pilots use this device for other work activities — sometimes in the cockpit. The interface has to work in that environment.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="heart" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <h3>High personal stakes</h3>
+              <p>Vacation weeks aren't just time off. They represent family commitments, personal milestones, and life priorities planned months in advance.</p>
+            </div>
+
+            <div class="differentiator">
+              <i data-lucide="arrow-up-narrow-wide" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <h3>Seniority complexity</h3>
+              <p>What's a realistic bid for one pilot may be completely unattainable for another. The tool needs to account for where each pilot sits in the seniority list.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <article class="container-narrow">
         <!-- Image Showcase: Scale Visualization -->
         <section class="image-showcase slate-bg">
           <div class="image-showcase-content">
@@ -286,17 +313,6 @@
             vacation — not how the contract defines it.
           </p>
 
-          <img
-            src="images/4ConceptsVA.png"
-            alt="Four vacation bidding concepts tested in RITE sessions with pilots"
-            class="section-image"
-          />
-          <p class="image-caption">
-            Four concepts tested in RITE sessions with pilots. No single
-            approach won — each revealed something different about how pilots
-            think about vacation strategy.
-          </p>
-
           <p>
             I partnered with a researcher to run a RITE (Rapid Iterative Testing
             and Evaluation) study with pilots, testing four different concept
@@ -317,23 +333,75 @@
             <li>A hybrid approach combining ranking with group selection</li>
           </ul>
 
+          <!-- Research Carousel -->
+          <div
+            class="carousel"
+            id="research-carousel"
+            role="region"
+            aria-label="Research images"
+          >
+            <div class="carousel-track" id="research-track">
+
+              <div class="carousel-slide">
+                <img
+                  src="images/4ConceptsVA.png"
+                  alt="Four vacation bidding concepts tested in RITE sessions with pilots"
+                />
+                <p class="carousel-caption">
+                  <strong>Four concepts tested in RITE sessions with pilots.</strong> No single approach won — each revealed something different about how pilots think about vacation strategy.
+                </p>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/SWAEaseOfUse.png"
+                  alt="Bar chart showing ease of use ratings across four vacation bidding concepts on a 1-7 scale"
+                />
+                <p class="carousel-caption">
+                  <strong>Ease of use ratings across all four concepts (1–7 scale).</strong> Concept B scored highest with the tightest range — strong approval but limited complexity. Concept A showed the widest range, suggesting pilots had fundamentally different mental models of the bid group flow. These findings directly shaped the synthesis direction.
+                </p>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/VA-Concept-Strategy 1.png"
+                  alt="Slide from RITE study readout presenting recommended synthesis direction"
+                />
+                <p class="carousel-caption">
+                  <strong>Recommended direction: synthesize the strongest elements from each concept and retest.</strong> Iteration over assumption.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-controls" aria-label="Carousel navigation">
+            <button class="carousel-btn" id="research-prev" aria-label="Previous image" disabled>
+              <i data-lucide="arrow-left" width="18" height="18"></i>
+            </button>
+            <div class="carousel-dots" id="research-dots" role="tablist"></div>
+            <button class="carousel-btn" id="research-next" aria-label="Next image">
+              <i data-lucide="arrow-right" width="18" height="18"></i>
+            </button>
+          </div>
+
           <h3>What pilots told us</h3>
-          <blockquote class="pull-quote">
-            <p>"It's not a term we use."</p>
-            <cite>— Pilot, on the term "bid group"</cite>
-          </blockquote>
+          <div class="quotes-grid">
+            <blockquote class="pull-quote">
+              <p>"It's not a term we use."</p>
+              <cite>— Pilot, on the term "bid group"</cite>
+            </blockquote>
 
-          <blockquote class="pull-quote">
-            <p>"Are we putting the cart before the horse for this one? Rank all
-            weeks, then rank all holiday weeks?"</p>
-            <cite>— Pilot, on concept sequencing</cite>
-          </blockquote>
+            <blockquote class="pull-quote">
+              <p>"Are we putting the cart before the horse for this one? Rank all weeks, then rank all holiday weeks?"</p>
+              <cite>— Pilot, on concept sequencing</cite>
+            </blockquote>
 
-          <blockquote class="pull-quote">
-            <p>"I think for most people, holidays are important, but personal
-            things are more important."</p>
-            <cite>— Pilot, on what vacation bidding is really about</cite>
-          </blockquote>
+            <blockquote class="pull-quote">
+              <p>"I think for most people, holidays are important, but personal things are more important."</p>
+              <cite>— Pilot, on what vacation bidding is really about</cite>
+            </blockquote>
+          </div>
 
           <div class="key-insight">
             <h4>Key Findings</h4>
@@ -346,30 +414,10 @@
             </p>
           </div>
 
-          <div class="annotated-image-block">
-            <img
-              src="images/SWAEaseOfUse.png"
-              alt="Bar chart showing ease of use ratings across four vacation bidding concepts on a 1-7 scale"
-              class="showcase-image"
-            />
-            <p class="image-caption">Ease of use ratings across all four concepts (1–7 scale).</p>
-            <p class="image-annotation">Concept B scored highest with the tightest range — strong approval but limited complexity. Concept A showed the widest range, suggesting pilots had fundamentally different mental models of the bid group flow. These findings directly shaped the synthesis direction.</p>
-          </div>
-
           <p>
             <strong>Design direction:</strong> Synthesize the strongest elements
             from each concept, reframe the language around how pilots actually
             talk about vacation, and run another round of testing.
-          </p>
-
-          <img
-            src="images/VA-Concept-Strategy 1.png"
-            alt="Slide from RITE study readout presenting recommended synthesis direction"
-            class="section-image"
-          />
-          <p class="image-caption">
-            Recommended direction: synthesize the strongest elements from each
-            concept and retest. Iteration over assumption.
           </p>
         </section>
 
@@ -575,7 +623,51 @@
         }
       });
 
-      // Carousel
+      // Research Carousel
+      (function () {
+        const track = document.getElementById("research-track");
+        const slides = track.querySelectorAll(".carousel-slide");
+        const prevBtn = document.getElementById("research-prev");
+        const nextBtn = document.getElementById("research-next");
+        const dotsContainer = document.getElementById("research-dots");
+        let current = 0;
+
+        slides.forEach((_, i) => {
+          const dot = document.createElement("button");
+          dot.classList.add("carousel-dot");
+          dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", "Slide " + (i + 1));
+          if (i === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => goTo(i));
+          dotsContainer.appendChild(dot);
+        });
+
+        function update() {
+          track.style.transform = "translateX(-" + current * 100 + "%)";
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current === slides.length - 1;
+          dotsContainer.querySelectorAll(".carousel-dot").forEach((d, i) => {
+            d.classList.toggle("active", i === current);
+          });
+        }
+
+        function goTo(index) {
+          current = Math.max(0, Math.min(index, slides.length - 1));
+          update();
+        }
+
+        prevBtn.addEventListener("click", () => goTo(current - 1));
+        nextBtn.addEventListener("click", () => goTo(current + 1));
+
+        document.getElementById("research-carousel").addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") goTo(current - 1);
+          if (e.key === "ArrowRight") goTo(current + 1);
+        });
+
+        update();
+      })();
+
+      // Bidding Carousel
       (function () {
         const track = document.getElementById("bidding-track");
         const slides = track.querySelectorAll(".carousel-slide");
