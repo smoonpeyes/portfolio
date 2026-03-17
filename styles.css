@@ -741,9 +741,16 @@ a:focus {
     margin-bottom: var(--space-md);
 }
 
-/* 3-column grid override */
+/* 3-column flex layout with centered last row */
 .about-3col-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.about-3col-grid > .differentiator {
+    flex: 0 0 calc(33.333% - (var(--space-lg) * 2 / 3));
 }
 
 /* 2-column grid for Beyond Design slate section */
@@ -1522,10 +1529,13 @@ article.container-narrow .pull-quote {
     }
     
     .differentiators-grid,
-    .about-3col-grid,
     .about-2col-grid,
     .in-brief-cards {
         grid-template-columns: 1fr;
+    }
+
+    .about-3col-grid > .differentiator {
+        flex: 0 0 100%;
     }
 
     .case-study-grid {
