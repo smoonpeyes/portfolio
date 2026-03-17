@@ -1404,10 +1404,6 @@ article.container-narrow .pull-quote {
     .solution-cards {
         grid-template-columns: 1fr;
     }
-
-    .impact .differentiators-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Impact/Results Section */
@@ -1741,6 +1737,7 @@ article.container-narrow .pull-quote {
     }
     
     .differentiators-grid,
+    .impact .differentiators-grid,
     .about-2col-grid,
     .in-brief-cards {
         grid-template-columns: 1fr;
