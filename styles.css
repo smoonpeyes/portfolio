@@ -207,9 +207,6 @@ a:focus {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
     color: var(--color-slate);
     text-decoration: none;
     letter-spacing: -0.02em;
@@ -221,12 +218,6 @@ a:focus {
     text-decoration: none;
 }
 
-.logo-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--color-pink);
-    flex-shrink: 0;
-}
 
 .nav-list {
     display: flex;
