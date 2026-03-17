@@ -730,10 +730,12 @@ a:focus {
     max-width: 680px;
 }
 
+.about-what-i-do h2,
 .about-what-i-do .intro-text {
+    text-align: left;
     max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .about-in-brief-band {
