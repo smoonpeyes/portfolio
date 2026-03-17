@@ -693,7 +693,65 @@ a:focus {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* ===== About page icon card grid (light background variant) ===== */
+/* ===== About page band sections ===== */
+.about-in-brief-band {
+    padding: var(--space-2xl) 0;
+}
+
+.about-in-brief-band h2 {
+    color: var(--color-slate);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.in-brief-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.in-brief-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.in-brief-card i {
+    flex-shrink: 0;
+    color: var(--color-pink);
+    width: 20px;
+    height: 20px;
+}
+
+.about-how-i-work-band {
+    padding: var(--space-2xl) 0;
+}
+
+.about-how-i-work-band h2 {
+    color: var(--color-slate);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+/* 3-column grid override */
+.about-3col-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2-column grid for Beyond Design slate section */
+.about-2col-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Light-background differentiator card variant */
 .about-differentiators-grid {
     margin-top: var(--space-lg);
 }
@@ -706,6 +764,58 @@ a:focus {
 .about-differentiators-grid .differentiator h3 {
     font-size: 1.125rem;
     margin-bottom: var(--space-sm);
+}
+
+/* About case study nav */
+.about-case-study-nav {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.about-case-study-nav h2 {
+    color: var(--color-slate);
+    margin-bottom: var(--space-lg);
+}
+
+.about-case-study-nav .case-study-nav {
+    border-top: none;
+    margin-top: 0;
+}
+
+.case-study-nav a {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-nav-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-pink);
+    margin-bottom: var(--space-xs);
+}
+
+.case-study-nav-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-slate);
+    line-height: 1.4;
+    flex: 1;
+}
+
+.case-study-nav-arrow {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--color-pink);
+    margin-top: var(--space-sm);
+    transition: transform 0.2s ease;
+}
+
+.case-study-nav a:hover .case-study-nav-arrow {
+    transform: translateX(4px);
 }
 
 /* ===== In Brief - improved alignment ===== */
@@ -1411,7 +1521,10 @@ article.container-narrow .pull-quote {
         grid-template-columns: 1fr;
     }
     
-    .differentiators-grid {
+    .differentiators-grid,
+    .about-3col-grid,
+    .about-2col-grid,
+    .in-brief-cards {
         grid-template-columns: 1fr;
     }
 
