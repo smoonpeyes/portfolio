@@ -694,21 +694,37 @@ a:focus {
 }
 
 /* ===== About page band sections ===== */
+
+/* Constrain body copy to 680px for readability */
+.about-in-brief-band p,
+.about-in-brief-band h2,
+.about-how-i-work-band h2,
+.about-section p,
+.about-section ul {
+    max-width: 680px;
+}
+
+.about-what-i-do .intro-text {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .about-in-brief-band {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
 }
 
 .about-in-brief-band h2 {
     color: var(--color-slate);
     margin-top: 0;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .in-brief-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
 }
 
 .in-brief-card {
@@ -732,7 +748,7 @@ a:focus {
 }
 
 .about-how-i-work-band {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
 }
 
 .about-how-i-work-band h2 {
@@ -741,16 +757,23 @@ a:focus {
     margin-bottom: var(--space-md);
 }
 
+/* Tighter spacing for about page differentiator sections */
+.about-what-i-do,
+.about-beyond-design {
+    margin: var(--space-lg) 0;
+    padding: var(--space-xl) 0;
+}
+
 /* 3-column flex layout with centered last row */
 .about-3col-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
 }
 
 .about-3col-grid > .differentiator {
-    flex: 0 0 calc(33.333% - (var(--space-lg) * 2 / 3));
+    flex: 0 0 calc(33.333% - (var(--space-md) * 2 / 3));
 }
 
 /* 2-column grid for Beyond Design slate section */
@@ -760,7 +783,7 @@ a:focus {
 
 /* Light-background differentiator card variant */
 .about-differentiators-grid {
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
 }
 
 .about-differentiators-grid .differentiator {
@@ -775,13 +798,8 @@ a:focus {
 
 /* About case study nav */
 .about-case-study-nav {
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-xl);
-}
-
-.about-case-study-nav h2 {
-    color: var(--color-slate);
-    margin-bottom: var(--space-lg);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-lg);
 }
 
 .about-case-study-nav .case-study-nav {
