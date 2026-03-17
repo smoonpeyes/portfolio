@@ -199,9 +199,23 @@
         <div class="about-section">
           <h2>Let's talk</h2>
           <p>
-            Interested in working together or have questions about my process? I'd love to hear from you.
+            I'm exploring what's next. If the work is hard and the stakes are real, that's exactly where I do my best work. Let's talk.
           </p>
-          <a href="mailto:layla.soileau@gmail.com" class="btn">Get in touch</a>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="contact-note">Note</label>
+              <textarea id="contact-note" name="note" required placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="btn">Send message</button>
+          </form>
         </div>
       </section>
     </main>
@@ -272,6 +286,20 @@
     <script>
       // Initialize Lucide icons
       lucide.createIcons();
+
+      // Contact form
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = this.querySelector('[name="name"]').value.trim();
+          const email = this.querySelector('[name="email"]').value.trim();
+          const note = this.querySelector('[name="note"]').value.trim();
+          const subject = encodeURIComponent('Portfolio contact from ' + name);
+          const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + note);
+          window.location.href = 'mailto:layla.soileau@gmail.com?subject=' + subject + '&body=' + body;
+        });
+      }
 
       const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
       const navList = document.querySelector(".nav-list");
