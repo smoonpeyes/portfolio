@@ -693,6 +693,21 @@ a:focus {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+/* ===== About page icon card grid (light background variant) ===== */
+.about-differentiators-grid {
+    margin-top: var(--space-lg);
+}
+
+.about-differentiators-grid .differentiator {
+    background: var(--color-white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-differentiators-grid .differentiator h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+}
+
 /* ===== In Brief - improved alignment ===== */
 .in-brief-grid {
   display: grid;
