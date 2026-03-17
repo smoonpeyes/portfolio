@@ -406,6 +406,10 @@
           </div>
           <button type="submit" class="btn">Send message</button>
         </form>
+        <div class="form-success" id="contact-success" aria-live="polite">
+          <i data-lucide="check-circle"></i>
+          <p>Thanks — your message is ready to send. Your email client should have opened with everything filled in.</p>
+        </div>
       </section>
     </main>
 
@@ -487,6 +491,8 @@
           const subject = encodeURIComponent('Portfolio contact from ' + name);
           const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + note);
           window.location.href = 'mailto:layla.soileau@gmail.com?subject=' + subject + '&body=' + body;
+          contactForm.classList.add('form-hidden');
+          document.getElementById('contact-success').classList.add('form-success--visible');
         });
       }
 
