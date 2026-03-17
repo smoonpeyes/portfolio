@@ -97,22 +97,22 @@
           <p class="intro-text">At the staff level, my work is as much about shaping the conditions for good design as it is about the design itself.</p>
           <div class="differentiators-grid">
             <div class="differentiator">
-              <i data-lucide="compass" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="compass" class="differentiator-icon icon-pink" aria-hidden="true"></i>
               <h3>Design strategy & vision</h3>
               <p>Defining design strategy and vision for complex product verticals.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="layers" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="layers" class="differentiator-icon icon-teal" aria-hidden="true"></i>
               <h3>Systems that scale</h3>
               <p>Building the systems — design systems, research operations, intake workflows — that let teams scale quality.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="users" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="users" class="differentiator-icon icon-purple" aria-hidden="true"></i>
               <h3>Mentorship & craft</h3>
               <p>Mentoring designers and setting the bar for craft across a team.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="network" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="network" class="differentiator-icon icon-pink" aria-hidden="true"></i>
               <h3>Cross-functional leadership</h3>
               <p>Connecting dots across product, engineering, research, and business stakeholders.</p>
             </div>
@@ -126,17 +126,17 @@
           <h2>How I work</h2>
           <div class="differentiators-grid about-3col-grid about-differentiators-grid">
             <div class="differentiator">
-              <i data-lucide="book-open" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="book-open" class="differentiator-icon icon-pink" aria-hidden="true"></i>
               <h3>Front-load understanding</h3>
               <p>Before I open Figma I want to know the business constraints, the regulatory environment, the user's mental model, and where the current system is failing. That investment pays off — I design fewer things wrong.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="shuffle" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="shuffle" class="differentiator-icon icon-teal" aria-hidden="true"></i>
               <h3>Strategic and hands-on</h3>
               <p>I can facilitate a stakeholder alignment session in the morning and spend the afternoon in Figma working through interaction states. I don't treat strategy and craft as separate disciplines.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="zap" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="zap" class="differentiator-icon icon-purple" aria-hidden="true"></i>
               <h3>Building with AI</h3>
               <p>I coded this portfolio using Claude Code, and I use Figma Make for component prototyping and dev handoff. I'm not precious about tools. I use whatever helps me do better work faster.</p>
             </div>
@@ -150,22 +150,22 @@
           <h2>Beyond design</h2>
           <div class="differentiators-grid about-2col-grid">
             <div class="differentiator">
-              <i data-lucide="film" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="film" class="differentiator-icon icon-pink" aria-hidden="true"></i>
               <h3>Screenwriting</h3>
               <p>Two completed TV pilots and a Stowe Story Labs fellowship. Currently in a Script Anatomy TV Rewrite Lab. Storytelling isn't separate from my design work — it's the same muscle.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="music" style="width:32px;height:32px;color:#00D9A3;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="music" class="differentiator-icon icon-teal" aria-hidden="true"></i>
               <h3>Drumming</h3>
               <p>I play drums in Sea Hagzzz, an all-women surf rock band in Austin. We're working on an album.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="activity" style="width:32px;height:32px;color:#5B2A86;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="activity" class="differentiator-icon icon-purple" aria-hidden="true"></i>
               <h3>Trail running</h3>
               <p>Completed the Sky Island 25k in September 2025. Currently running the Texas hill country.</p>
             </div>
             <div class="differentiator">
-              <i data-lucide="map-pin" style="width:32px;height:32px;color:#E63980;margin-bottom:1rem;display:block;"></i>
+              <i data-lucide="map-pin" class="differentiator-icon icon-pink" aria-hidden="true"></i>
               <h3>Roots</h3>
               <p>Originally from Acadiana, Louisiana.</p>
             </div>
@@ -217,11 +217,14 @@
             <button type="submit" class="btn">Send message</button>
           </form>
           <div class="form-success" id="contact-success" aria-live="polite">
-            <i data-lucide="check-circle"></i>
-            <p>Message sent — I'll be in touch soon.</p>
+            <i data-lucide="check-circle" aria-hidden="true"></i>
+            <div>
+              <p>Message sent — I'll be in touch soon.</p>
+              <button class="form-reset-btn" id="contact-reset">Send another message</button>
+            </div>
           </div>
           <div class="form-error" id="contact-error" aria-live="polite">
-            <i data-lucide="alert-circle"></i>
+            <i data-lucide="alert-circle" aria-hidden="true"></i>
             <p>Something went wrong. Please try emailing me directly at <a href="mailto:layla.soileau@gmail.com">layla.soileau@gmail.com</a>.</p>
           </div>
         </div>
@@ -311,6 +314,7 @@
               headers: { 'Accept': 'application/json' }
             });
             if (response.ok) {
+              contactForm.reset();
               contactForm.classList.add('form-hidden');
               document.getElementById('contact-success').classList.add('form-success--visible');
             } else {
@@ -323,6 +327,14 @@
             btn.textContent = 'Send message';
             document.getElementById('contact-error').classList.add('form-error--visible');
           }
+        });
+
+        document.getElementById('contact-reset').addEventListener('click', function () {
+          document.getElementById('contact-success').classList.remove('form-success--visible');
+          contactForm.classList.remove('form-hidden');
+          const btn = contactForm.querySelector('button[type="submit"]');
+          btn.disabled = false;
+          btn.textContent = 'Send message';
         });
       }
 

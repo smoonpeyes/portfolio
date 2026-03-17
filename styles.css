@@ -322,7 +322,7 @@ a:focus {
 .hero {
     background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-light) 100%);
     color: var(--color-cream);
-    padding: 2.25rem 0;
+    padding: 2.25rem 0 1rem;
     text-align: center;
 }
 
@@ -593,6 +593,24 @@ a:focus {
     line-height: 1.5;
 }
 
+.form-reset-btn {
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-teal-dark);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.form-reset-btn:hover {
+    color: var(--color-seafoam);
+}
+
 /* Collapse gap where container-narrow directly abuts the differentiators band */
 .container-narrow + .differentiators {
     margin-top: 0;
@@ -601,10 +619,6 @@ a:focus {
 /* Collapse gap between Additional Impact and My Superpowers */
 .other-projects + .differentiators {
     margin-top: 0;
-}
-.other-projects {
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .differentiators + .container-narrow {
@@ -1617,6 +1631,31 @@ article.container-narrow .pull-quote {
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
+/* Project card icon gradient variants */
+.project-card-icon--purple { background: linear-gradient(135deg, var(--color-purple) 0%, #7b3aa6 100%); }
+.project-card-icon--teal   { background: linear-gradient(135deg, var(--color-seafoam) 0%, var(--color-teal-dark) 100%); }
+.project-card-icon--pink   { background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink-dark) 100%); }
+
+/* Icon sizes for project cards and differentiators */
+.project-card-icon i {
+    width: 28px;
+    height: 28px;
+}
+
+.differentiator-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Icon colour utilities */
+.icon-pink   { color: var(--color-pink); }
+.icon-teal   { color: var(--color-seafoam); }
+.icon-purple { color: var(--color-purple); }
+.icon-light  { color: var(--color-cream); }
+.icon-dark   { color: var(--color-charcoal); }
 
 .project-card-content {
     flex: 1;
