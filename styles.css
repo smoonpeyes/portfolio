@@ -328,7 +328,7 @@ a:focus {
 
 /* Reduce gap between hero and first content section */
 .hero + .container {
-    padding-top: var(--space-md);
+    padding-top: var(--space-xl);
 }
 
 .hero h1 {
