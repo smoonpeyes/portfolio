@@ -704,7 +704,7 @@ a:focus {
 
 .about-portrait {
   flex-shrink: 0;
-  width: 160px;
+  width: 200px;
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius);
@@ -745,7 +745,7 @@ a:focus {
 }
 
 .about-in-brief-band {
-    padding: var(--space-lg) 0;
+    padding: var(--space-sm) 0;
 }
 
 .about-in-brief-band h2 {
@@ -782,7 +782,7 @@ a:focus {
 }
 
 .about-how-i-work-band {
-    padding: var(--space-lg) 0;
+    padding: var(--space-sm) 0;
 }
 
 .about-how-i-work-band h2 {
@@ -794,8 +794,8 @@ a:focus {
 /* Tighter spacing for about page differentiator sections */
 .about-what-i-do,
 .about-beyond-design {
-    margin: var(--space-lg) 0;
-    padding: var(--space-xl) 0;
+    margin: 0;
+    padding: var(--space-lg) 0;
 }
 
 /* 3-column flex layout with centered last row */
