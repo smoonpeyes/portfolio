@@ -1578,9 +1578,10 @@ article.container-narrow .pull-quote {
 }
 
 .feature-card {
-    background: var(--color-cream);
+    background: var(--color-white);
     border-radius: var(--radius-md);
     padding: var(--space-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .other-projects {
