@@ -355,7 +355,7 @@ a:focus {
 .hero p {
     font-size: 1.125rem;
     max-width: 680px;
-    margin: 0 auto var(--space-xl);
+    margin: 0 auto;
     opacity: 0.85;
     line-height: 1.7;
 }
