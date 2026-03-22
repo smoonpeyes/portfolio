@@ -1569,6 +1569,20 @@ article.container-narrow .pull-quote {
    Other Projects Section Styles
    =================================== */
 
+/* Feature Cards (side-by-side) */
+.feature-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.feature-card {
+    background: var(--color-cream);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
 .other-projects {
     background: var(--color-white);
     padding: var(--space-xl) 0;
