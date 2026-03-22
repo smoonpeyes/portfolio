@@ -1791,10 +1791,16 @@ article.container-narrow .pull-quote {
     html {
         font-size: 14px;
     }
-    
+
     .container,
     .container-narrow {
         padding: var(--space-lg) var(--space-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
     }
 }
 
